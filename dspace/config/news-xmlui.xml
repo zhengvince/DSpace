@@ -2,8 +2,8 @@
 <document xmlns="http://di.tamu.edu/DRI/1.0/" xmlns:i18n="http://apache.org/cocoon/i18n/2.1" version="1.1">
 <body>
 <div id="file.news.div.news" n="news" rend="primary">
-<head>DSpace Repository</head>
-<p>DSpace is a digital service that collects, preserves, and distributes digital material. Repositories are important tools for preserving an organization&apos;s legacy; they facilitate digital preservation and scholarly communication.</p>
+<head>建业教育集团-知识库</head>
+<p>知识库系统用于收集、储存、分发、分享各类数字资料，使之形成一个储存安全、搜索方便、分享容易、管控简单的知识体系</p>
 </div>
 </body>
 <options/>

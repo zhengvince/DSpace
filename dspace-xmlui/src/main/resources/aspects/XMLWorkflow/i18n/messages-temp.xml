@@ -8,10 +8,14 @@
     http://www.dspace.org/license/
 
 -->
-<catalogue xml:lang="zh_CN" xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
+<catalogue xml:lang="en" xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
+
+
+
+
     <!--——————————————————————————————————
-                 vince		以下为XMLWorkflow文件夹中的汉化
-         ——————————————————————————————-->
+             vince		以下为XMLWorkflow文件夹中的汉化
+     ——————————————————————————————-->
     <message key="xmlui.XMLWorkflow.workflow.ClaimAction.info1">Actions you may perform on this task:</message>
     <message key="xmlui.XMLWorkflow.workflow.ClaimAction.take_help">Assign this task to yourself.</message>
     <message key="xmlui.XMLWorkflow.workflow.ClaimAction.take_submit">Take task</message>
@@ -92,4 +96,5 @@
     <message key="xmlui.XMLWorkflow.scoreReview.scoreReviewStep.claimaction">Score review</message>
     <message key="xmlui.XMLWorkflow.scoreReview.scoreReviewStep.scorereviewaction">Score review</message>
     <message key="xmlui.XMLWorkflow.scoreReview.scoreReviewStep">Score review</message>
+
 </catalogue>

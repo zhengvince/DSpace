@@ -8,11 +8,14 @@
     http://www.dspace.org/license/
 
 -->
-<catalogue xml:lang="zh_CN" xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
+<catalogue xml:lang="en" xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
+
+
+
 
     <!--——————————————————————————————————
-             vince	以下为SwordClient文件夹中的汉化
- ——————————————————————————————-->
+                 vince	以下为SwordClient文件夹中的汉化
+     ——————————————————————————————-->
 
     <!--   Sword Client  -->
     <message key="xmlui.swordclient.Navigation.context_head">Sword Copy</message>
@@ -63,6 +66,8 @@
 
     <message key="xmlui.swordclient.SwordResponse.title">Sword response</message>
     <message key="xmlui.swordclient.SwordResponse.trail">Sword response</message>
+
+
 
 
 </catalogue>
