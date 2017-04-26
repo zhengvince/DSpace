@@ -746,8 +746,8 @@
 	<message key="xmlui.Submission.submit.DescribeStep.year">年</message>
 	<message key="xmlui.Submission.submit.DescribeStep.month">月</message>
 	<message key="xmlui.Submission.submit.DescribeStep.day">日</message>
-	<message key="xmlui.Submission.submit.DescribeStep.series_name">Series Name</message>
-	<message key="xmlui.Submission.submit.DescribeStep.report_no">Report or paper No.</message>
+	<message key="xmlui.Submission.submit.DescribeStep.series_name">系列名</message>
+	<message key="xmlui.Submission.submit.DescribeStep.report_no">编号.</message>
 	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.link">Subject Categories</message>
 	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.title">Subject Categories</message>
 	<message key="xmlui.Submission.submit.DescribeStep.controlledvocabulary.filter.label">Filter subjects</message>
