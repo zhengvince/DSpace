@@ -35,8 +35,8 @@
 	<message key="xmlui.general.delete">删除</message>
 	<message key="xmlui.general.next">下一页</message>
 	<message key="xmlui.general.untitled">未命名</message>
-	<message key="xmlui.general.perform">Perform</message>
-	<message key="xmlui.general.queue">Queue</message>
+	<message key="xmlui.general.perform">执行</message>
+	<message key="xmlui.general.queue">队列</message>
 
 	<!-- Keys which are used by exception2dri.xsl on error pages -->
 	<message key="xmlui.error.contact_msg">如果您要报告此错误，请联系网站管理员。 如果可能，请提供有此错误发生时正在进行的操作的详细信息.</message>
@@ -57,23 +57,23 @@
 	<!--
 	   The "utils" non-aspect
        -->
-	<message key="xmlui.utils.AuthenticationUtil.onlyAdmins">Only site administrators may assume login as another user.</message>
-	<message key="xmlui.utils.AuthenticationUtil.onlyAuthenticatedAdmins">Only authenticated users who are administrators may assume the login as another user.</message>
-	<message key="xmlui.utils.AuthenticationUtil.notAnotherAdmin">You may not assume the login as another administrator.</message>
+	<message key="xmlui.utils.AuthenticationUtil.onlyAdmins">只有站点管理员可能会以其他用户身份登录.</message>
+	<message key="xmlui.utils.AuthenticationUtil.onlyAuthenticatedAdmins">只有系统管理员才可以将其作为其他用户进行登录.</message>
+	<message key="xmlui.utils.AuthenticationUtil.notAnotherAdmin">您不可以以另一个管理员身份登录.</message>
 
 
 	<!--
 		This section is for feed syndications (RSS, atom, etc)
 	-->
-	<message key="xmlui.feed.general_description">The DSpace digital repository system captures, stores, indexes, preserves, and distributes digital research material.</message>
-	<message key="xmlui.feed.header">RSS Feeds</message>
-	<message key="xmlui.feed.logo_title">The Channel Image</message>
+	<message key="xmlui.feed.general_description">DSpace电子文档存储系统，采集，存储，索引，保存和分发电子文档.</message>
+	<message key="xmlui.feed.header">RSS 种子</message>
+	<message key="xmlui.feed.logo_title">频道图片</message>
 	<message key="xmlui.feed.untitled">未命名</message>
 
 	<!--
 		Default notice header
 	 	-->
-	<message key="xmlui.general.notice.default_head">Notice</message>
+	<message key="xmlui.general.notice.default_head">注意</message>
 
 
 
@@ -96,22 +96,22 @@
 	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_author">作者</message>
 	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_title">标题</message>
 	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_subject">标签</message>
-	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_abstract">Abstract</message>
-	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_series">Series</message>
-	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_sponsor">Sponsor</message>
-	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_identifier">Identifier</message>
-	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_language">Language (ISO)</message>
-	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_keyword">Keyword</message>
+	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_abstract">摘要</message>
+	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_series">系列</message>
+	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_sponsor">赞助人</message>
+	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_identifier">ID</message>
+	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_language">语言 (ISO)</message>
+	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_keyword">关键字</message>
 
 	<!--  some common other possibilities for Advanced 搜索 Fields -->
-	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_contributor">Contributor</message>
-	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_creator">Creator</message>
+	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_contributor">协作人</message>
+	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_creator">创建人</message>
 	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_description">描述</message>
-	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_relation">Relation</message>
-	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_mime">Mime-Type</message>
-	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_other">Other Contributor</message>
-	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_advisor">Advisor</message>
-	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_department">Department</message>
+	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_relation">关系</message>
+	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_mime">Mime-类型</message>
+	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_other">其他协作人</message>
+	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_advisor">顾问</message>
+	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_department">部门</message>
 
 	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_ANY">全文</message>
 
@@ -158,24 +158,25 @@
 
 
 	<!-- org.dspace.app.xmlui.administrative.WithdrawnItems.java -->
-	<message key="xmlui.Administrative.WithdrawnItems.title.item.title">Withdrawn 项目 by 标题</message>
-	<message key="xmlui.Administrative.WithdrawnItems.trail.item.title">Withdrawn 项目 by 标题</message>
+	<message key="xmlui.Administrative.WithdrawnItems.title.item.title">已删除项目</message>
+	<message key="xmlui.Administrative.WithdrawnItems.trail.item.title">已删除项目</message>
 
-	<message key="xmlui.Administrative.WithdrawnItems.title.item.dateissued">Withdrawn 项目 根据发布时间</message>
-	<message key="xmlui.Administrative.WithdrawnItems.trail.item.dateissued">Withdrawn 项目 根据发布时间</message>
+	<message key="xmlui.Administrative.WithdrawnItems.title.item.dateissued">根据“发布时间”查看“已删除项目”</message>
+	<message key="xmlui.Administrative.WithdrawnItems.trail.item.dateissued">根据“发布时间”查看“已删除项目”</message>
 
-	<message key="xmlui.Administrative.WithdrawnItems.title.item.dateaccessioned">Withdrawn 项目 by Submit Date</message>
-	<message key="xmlui.Administrative.WithdrawnItems.trail.item.dateaccessioned">Withdrawn 项目 by Submit Date</message>
+	<message key="xmlui.Administrative.WithdrawnItems.title.item.dateaccessioned">根据“上传时间”查看“已删除项目”</message>
+	<message key="xmlui.Administrative.WithdrawnItems.trail.item.dateaccessioned">根据“上传时间”查看“已删除项目”</message>
 
 	<!-- org.dspace.app.xmlui.administrative.PrivateItems.java -->
-	<message key="xmlui.Administrative.PrivateItems.title.item.title">Private 项目 by 标题</message>
-	<message key="xmlui.Administrative.PrivateItems.trail.item.title">Private 项目 by 标题</message>
+	<message key="xmlui.Administrative.PrivateItems.title.item.title">我的私有项目 </message>
+	<message key="xmlui.Administrative.PrivateItems.trail.item.title">我的私有项目</message>
 
-	<message key="xmlui.Administrative.PrivateItems.title.item.dateissued">Private 项目 根据发布时间</message>
-	<message key="xmlui.Administrative.PrivateItems.trail.item.dateissued">Private 项目 根据发布时间</message>
+	<message key="xmlui.Administrative.PrivateItems.title.item.dateissued">根据“发布时间”查看“私有项目”</message>
+	<message key="xmlui.Administrative.PrivateItems.trail.item.dateissued">根据“发布时间”查看“私有项目”</message>
 
-	<message key="xmlui.Administrative.PrivateItems.title.item.dateaccessioned">Private 项目 by Submit Date</message>
-	<message key="xmlui.Administrative.PrivateItems.trail.item.dateaccessioned">Private 项目 by Submit Date</message>
+	<message key="xmlui.Administrative.PrivateItems.title.item.dateaccessioned">根据“上传时间”查看“私有项目”</message>
+	<message key="xmlui.Administrative.PrivateItems.trail.item.dateaccessioned">根据“上传时间”查看“私有项目”<</message>
+
 
 	<!-- org.dspace.app.xmlui.artifactbrowser.CollectionViewer.java -->
 	<message key="xmlui.ArtifactBrowser.CollectionViewer.search_scope">搜索范围</message>
@@ -236,8 +237,8 @@
 	<!-- org.dspace.app.xmlui.artifactbrowser.ItemViewer.java -->
 	<message key="xmlui.ArtifactBrowser.ItemViewer.trail">View Item</message>
 	<message key="xmlui.ArtifactBrowser.ItemViewer.head_parent_collections">This item appears in the following 频道(s)</message>
-	<message key="xmlui.ArtifactBrowser.ItemViewer.show_simple">Show simple item record</message>
-	<message key="xmlui.ArtifactBrowser.ItemViewer.show_full">显示完整项目信息</message>
+	<message key="xmlui.ArtifactBrowser.ItemViewer.show_simple">简略信息</message>
+	<message key="xmlui.ArtifactBrowser.ItemViewer.show_full">完整信息</message>
 
 	<message key="xmlui.ArtifactBrowser.ItemViewer.withdrawn">This item has been withdrawn and is no longer available.</message>
 
@@ -704,7 +705,7 @@
 	<message key="xmlui.Submission.submit.progressbar.complete">Complete</message>
 
 	<!-- org.dspace.app.xmlui.Submission.submit.ResumeStep -->
-	<message key="xmlui.Submission.submit.ResumeStep.submit_resume">Resume</message>
+	<message key="xmlui.Submission.submit.ResumeStep.submit_resume">继续</message>
 
 	<!-- org.dspace.app.xmlui.Submission.submit.SelectCollection -->
 	<message key="xmlui.Submission.submit.SelectCollection.head">选择频道</message>
@@ -987,7 +988,7 @@
 	<message key="xmlui.administrative.FlowMapperUtils.unmaped_items">The items have been unmapped.</message>
 
 	<!-- general items for all of the eperson classes -->
-	<message key="xmlui.administrative.eperson.general.epeople_trail">Manage 会员</message>
+	<message key="xmlui.administrative.eperson.general.epeople_trail">用户管理</message>
 
 	<!-- org.dspace.app.xmlui.administrative.Navigation -->
 	<!-- contextual menu items -->
@@ -1044,23 +1045,23 @@
 
 
 	<!-- org.dspace.app.xmlui.administrative.eperson.ManageEPeopleMain -->
-	<message key="xmlui.administrative.eperson.ManageEPeopleMain.title">Manage 会员</message>
-	<message key="xmlui.administrative.eperson.ManageEPeopleMain.main_head">E-person management</message>
-	<message key="xmlui.administrative.eperson.ManageEPeopleMain.actions_head">Actions</message>
-	<message key="xmlui.administrative.eperson.ManageEPeopleMain.actions_create">创建 a new E-Person</message>
-	<message key="xmlui.administrative.eperson.ManageEPeopleMain.actions_create_link">Click here to add a new E-Person.</message>
-	<message key="xmlui.administrative.eperson.ManageEPeopleMain.actions_browse">Browse E-People</message>
-	<message key="xmlui.administrative.eperson.ManageEPeopleMain.actions_browse_link">Click here to browse all E-People.</message>
-	<message key="xmlui.administrative.eperson.ManageEPeopleMain.actions_search">搜索 for E-People</message>
-	<message key="xmlui.administrative.eperson.ManageEPeopleMain.search_help">E-People are searched by any partial match on email or name</message>
-	<message key="xmlui.administrative.eperson.ManageEPeopleMain.search_para1">Below is the list of E-People that matched your search query. Select the E-People you want to delete and click the delete button to continue or click on an E-Person's email or name to edit them.</message>
-	<message key="xmlui.administrative.eperson.ManageEPeopleMain.search_head">搜索 results</message>
+	<message key="xmlui.administrative.eperson.ManageEPeopleMain.title">用户管理</message>
+	<message key="xmlui.administrative.eperson.ManageEPeopleMain.main_head">用户管理</message>
+	<message key="xmlui.administrative.eperson.ManageEPeopleMain.actions_head">操作</message>
+	<message key="xmlui.administrative.eperson.ManageEPeopleMain.actions_create">创建用户</message>
+	<message key="xmlui.administrative.eperson.ManageEPeopleMain.actions_create_link">点击创建一个新用户.</message>
+	<message key="xmlui.administrative.eperson.ManageEPeopleMain.actions_browse">浏览用户</message>
+	<message key="xmlui.administrative.eperson.ManageEPeopleMain.actions_browse_link">点击查看所有用户.</message>
+	<message key="xmlui.administrative.eperson.ManageEPeopleMain.actions_search">用户搜索</message>
+	<message key="xmlui.administrative.eperson.ManageEPeopleMain.search_help">根据邮箱和姓名进行模糊搜索。</message>
+	<message key="xmlui.administrative.eperson.ManageEPeopleMain.search_para1">以下是与您的搜索查询匹配的用户列表。 您可以选择某个用户进行编辑或删除.</message>
+	<message key="xmlui.administrative.eperson.ManageEPeopleMain.search_head">搜索结果</message>
 	<message key="xmlui.administrative.eperson.ManageEPeopleMain.search_column1"></message>
 	<message key="xmlui.administrative.eperson.ManageEPeopleMain.search_column2">ID</message>
-	<message key="xmlui.administrative.eperson.ManageEPeopleMain.search_column3">Name</message>
-	<message key="xmlui.administrative.eperson.ManageEPeopleMain.search_column4">Email</message>
-	<message key="xmlui.administrative.eperson.ManageEPeopleMain.submit_delete">Delete E-People</message>
-	<message key="xmlui.administrative.eperson.ManageEPeopleMain.no_results">Your search found no results...</message>
+	<message key="xmlui.administrative.eperson.ManageEPeopleMain.search_column3">姓名</message>
+	<message key="xmlui.administrative.eperson.ManageEPeopleMain.search_column4">邮箱</message>
+	<message key="xmlui.administrative.eperson.ManageEPeopleMain.submit_delete">删除用户</message>
+	<message key="xmlui.administrative.eperson.ManageEPeopleMain.no_results">无匹配结果...</message>
 
 
 	<!-- org.dspace.app.xmlui.administrative.eperson.AddEPersonForm -->
@@ -1073,35 +1074,35 @@
 	<message key="xmlui.administrative.eperson.AddEPersonForm.error_email">邮箱地址不能为空</message>
 	<message key="xmlui.administrative.eperson.AddEPersonForm.error_fname">姓不能为空</message>
 	<message key="xmlui.administrative.eperson.AddEPersonForm.error_lname">名不能为空</message>
-	<message key="xmlui.administrative.eperson.AddEPersonForm.req_certs">Require Certificate</message>
+	<message key="xmlui.administrative.eperson.AddEPersonForm.req_certs">需要证书</message>
 	<message key="xmlui.administrative.eperson.AddEPersonForm.can_log_in">可以登录</message>
-	<message key="xmlui.administrative.eperson.AddEPersonForm.submit_create">创建 E-Person</message>
+	<message key="xmlui.administrative.eperson.AddEPersonForm.submit_create">创建用户</message>
 
 	<!-- org.dspace.app.xmlui.administrative.eperson.EditEPersonForm -->
-	<message key="xmlui.administrative.eperson.EditEPersonForm.title">编辑 E-Person</message>
-	<message key="xmlui.administrative.eperson.EditEPersonForm.trail">编辑 E-Person</message>
-	<message key="xmlui.administrative.eperson.EditEPersonForm.head1">编辑 an E-Person</message>
-	<message key="xmlui.administrative.eperson.EditEPersonForm.email_taken">That 邮箱地址 is in use by another E-Person. Emails must be unique.</message>
-	<message key="xmlui.administrative.eperson.EditEPersonForm.head2">{0}'s information:</message>
-	<message key="xmlui.administrative.eperson.EditEPersonForm.error_email_unique">邮箱地址 must be unique</message>
-	<message key="xmlui.administrative.eperson.EditEPersonForm.error_email">邮箱地址 is required</message>
-	<message key="xmlui.administrative.eperson.EditEPersonForm.error_fname">姓 is required</message>
-	<message key="xmlui.administrative.eperson.EditEPersonForm.error_lname">Last name is required</message>
-	<message key="xmlui.administrative.eperson.EditEPersonForm.req_certs">Require Certificate</message>
-	<message key="xmlui.administrative.eperson.EditEPersonForm.can_log_in">Can Log In</message>
-	<message key="xmlui.administrative.eperson.EditEPersonForm.submit_reset_password">Reset Password</message>
-	<message key="xmlui.administrative.eperson.EditEPersonForm.special_help">You may also permanently remove this E-Person from the system or reset his/her password. When resetting a password the user will be sent an email containing a special link they can follow to choose a new password.</message>
-	<message key="xmlui.administrative.eperson.EditEPersonForm.submit_delete">Delete E-Person</message>
-	<message key="xmlui.administrative.eperson.EditEPersonForm.submit_login_as">Login as E-Person</message>
+	<message key="xmlui.administrative.eperson.EditEPersonForm.title">用户编辑</message>
+	<message key="xmlui.administrative.eperson.EditEPersonForm.trail">用户编辑</message>
+	<message key="xmlui.administrative.eperson.EditEPersonForm.head1">编辑用户</message>
+	<message key="xmlui.administrative.eperson.EditEPersonForm.email_taken">邮箱地址已被注册，请使用其他邮箱.</message>
+	<message key="xmlui.administrative.eperson.EditEPersonForm.head2">{0} 信息:</message>
+	<message key="xmlui.administrative.eperson.EditEPersonForm.error_email_unique">“邮箱地址”已被注册</message>
+	<message key="xmlui.administrative.eperson.EditEPersonForm.error_email">请输入“邮箱地址”</message>
+	<message key="xmlui.administrative.eperson.EditEPersonForm.error_fname">请输入“姓”</message>
+	<message key="xmlui.administrative.eperson.EditEPersonForm.error_lname">请输入“名”</message>
+	<message key="xmlui.administrative.eperson.EditEPersonForm.req_certs">需要证书</message>
+	<message key="xmlui.administrative.eperson.EditEPersonForm.can_log_in">无法登录</message>
+	<message key="xmlui.administrative.eperson.EditEPersonForm.submit_reset_password">重置密码</message>
+	<message key="xmlui.administrative.eperson.EditEPersonForm.special_help">您也可以从系统中永久删除此用户或重置其密码。 当重置密码时，系统将给用户发送一封电子邮件，其中包含特殊链接，用来重置密码。</message>
+	<message key="xmlui.administrative.eperson.EditEPersonForm.submit_delete">删除用户</message>
+	<message key="xmlui.administrative.eperson.EditEPersonForm.submit_login_as">用户登录</message>
 
-	<message key="xmlui.administrative.eperson.EditEPersonForm.delete_constraint">This eperson is unable to be deleted because of the following constraint(s):</message>
-	<message key="xmlui.administrative.eperson.EditEPersonForm.delete_constraint.last_conjunction">and</message>
-	<message key="xmlui.administrative.eperson.EditEPersonForm.delete_constraint.item">eperson has submitted one or more items</message>
-	<message key="xmlui.administrative.eperson.EditEPersonForm.delete_constraint.workflowitem">eperson has an active submission workflow</message>
-	<message key="xmlui.administrative.eperson.EditEPersonForm.delete_constraint.tasklistitem">eperson has a workflow task awaiting their attention</message>
-	<message key="xmlui.administrative.eperson.EditEPersonForm.delete_constraint.unknown">eperson has an unidentified constraint within the system</message>
+	<message key="xmlui.administrative.eperson.EditEPersonForm.delete_constraint">由于以下限制，此用户无法删除:</message>
+	<message key="xmlui.administrative.eperson.EditEPersonForm.delete_constraint.last_conjunction">和</message>
+	<message key="xmlui.administrative.eperson.EditEPersonForm.delete_constraint.item">用户已经提交一个或多个项目</message>
+	<message key="xmlui.administrative.eperson.EditEPersonForm.delete_constraint.workflowitem">用户有一个进行中的工作流</message>
+	<message key="xmlui.administrative.eperson.EditEPersonForm.delete_constraint.tasklistitem">用户有一个待处理的工作流</message>
+	<message key="xmlui.administrative.eperson.EditEPersonForm.delete_constraint.unknown">未知错误</message>
 
-	<message key="xmlui.administrative.eperson.EditEPersonForm.member_head">群组 this E-Person is a member of:</message>
+	<message key="xmlui.administrative.eperson.EditEPersonForm.member_head">该用户所属群组:</message>
 	<message key="xmlui.administrative.eperson.EditEPersonForm.indirect_member">(via group: {0})</message>
 	<message key="xmlui.administrative.eperson.EditEPersonForm.member_none">none</message>
 
@@ -1117,61 +1118,61 @@
 	<message key="xmlui.administrative.eperson.DeleteEPeopleConfirm.head_email">Email</message>
 
 	<!-- general items for all of the group classes -->
-	<message key="xmlui.administrative.group.general.group_trail">Manage 群组</message>
+	<message key="xmlui.administrative.group.general.group_trail">群组管理</message>
 
 	<!-- org.dspace.app.xmlui.administrative.group.ManageGroupsMain -->
-	<message key="xmlui.administrative.group.ManageGroupsMain.title">Manage 群组</message>
-	<message key="xmlui.administrative.group.ManageGroupsMain.main_head">Group management</message>
-	<message key="xmlui.administrative.group.ManageGroupsMain.actions_head">Actions</message>
-	<message key="xmlui.administrative.group.ManageGroupsMain.actions_create">创建 a new group</message>
-	<message key="xmlui.administrative.group.ManageGroupsMain.actions_create_link">Click here to add a new Group.</message>
-	<message key="xmlui.administrative.group.ManageGroupsMain.actions_browse">Browse groups</message>
-	<message key="xmlui.administrative.group.ManageGroupsMain.actions_browse_link">Click here to browse all 群组.</message>
-	<message key="xmlui.administrative.group.ManageGroupsMain.actions_search">搜索 for groups</message>
-	<message key="xmlui.administrative.group.ManageGroupsMain.search_help">群组 are searched by any partial match on their name</message>
-	<message key="xmlui.administrative.group.ManageGroupsMain.search_head">搜索 results</message>
+	<message key="xmlui.administrative.group.ManageGroupsMain.title">群组管理</message>
+	<message key="xmlui.administrative.group.ManageGroupsMain.main_head">群组管理</message>
+	<message key="xmlui.administrative.group.ManageGroupsMain.actions_head">操作</message>
+	<message key="xmlui.administrative.group.ManageGroupsMain.actions_create">创建群组</message>
+	<message key="xmlui.administrative.group.ManageGroupsMain.actions_create_link">点击创建群组.</message>
+	<message key="xmlui.administrative.group.ManageGroupsMain.actions_browse">浏览群组</message>
+	<message key="xmlui.administrative.group.ManageGroupsMain.actions_browse_link">点击查看所有群组.</message>
+	<message key="xmlui.administrative.group.ManageGroupsMain.actions_search">搜索群组</message>
+	<message key="xmlui.administrative.group.ManageGroupsMain.search_help">通过名称搜索群组（模糊搜索）。</message>
+	<message key="xmlui.administrative.group.ManageGroupsMain.search_head">搜索结果</message>
 	<message key="xmlui.administrative.group.ManageGroupsMain.search_column1"></message>
 	<message key="xmlui.administrative.group.ManageGroupsMain.search_column2">ID</message>
-	<message key="xmlui.administrative.group.ManageGroupsMain.search_column3">Name</message>
-	<message key="xmlui.administrative.group.ManageGroupsMain.search_column4">Members</message>
+	<message key="xmlui.administrative.group.ManageGroupsMain.search_column3">名称</message>
+	<message key="xmlui.administrative.group.ManageGroupsMain.search_column4">成员</message>
 	<message key="xmlui.administrative.group.ManageGroupsMain.search_column5">社区 / 频道</message>
-	<message key="xmlui.administrative.group.ManageGroupsMain.collection_link">View</message>
-	<message key="xmlui.administrative.group.ManageGroupsMain.submit_delete">Delete groups</message>
-	<message key="xmlui.administrative.group.ManageGroupsMain.no_results">Your search found no results...</message>
+	<message key="xmlui.administrative.group.ManageGroupsMain.collection_link">查看</message>
+	<message key="xmlui.administrative.group.ManageGroupsMain.submit_delete">删除</message>
+	<message key="xmlui.administrative.group.ManageGroupsMain.no_results">无匹配结果...</message>
 
 	<!-- org.dspace.app.xmlui.administrative.group.EditGroupForm -->
-	<message key="xmlui.administrative.group.EditGroupForm.title">Group Editor</message>
-	<message key="xmlui.administrative.group.EditGroupForm.trail">编辑 group</message>
-	<message key="xmlui.administrative.group.EditGroupForm.main_head">Group Editor: {0} (id: {1})</message>
-	<message key="xmlui.administrative.group.EditGroupForm.main_head_new">Group Editor: new group</message>
-	<message key="xmlui.administrative.group.EditGroupForm.submit_clear">Clear search</message>
-	<message key="xmlui.administrative.group.EditGroupForm.member">Member</message>
+	<message key="xmlui.administrative.group.EditGroupForm.title">群组编辑</message>
+	<message key="xmlui.administrative.group.EditGroupForm.trail">编辑群组</message>
+	<message key="xmlui.administrative.group.EditGroupForm.main_head">编辑群组: {0} (id: {1})</message>
+	<message key="xmlui.administrative.group.EditGroupForm.main_head_new">编辑群组: 新建群组</message>
+	<message key="xmlui.administrative.group.EditGroupForm.submit_clear">清空搜索</message>
+	<message key="xmlui.administrative.group.EditGroupForm.member">成员</message>
 	<message key="xmlui.administrative.group.EditGroupForm.cycle">Cycle</message>
-	<message key="xmlui.administrative.group.EditGroupForm.pending">Pending</message>
-	<message key="xmlui.administrative.group.EditGroupForm.pending_warn">Note, pending changes are not saved until you click the save button.</message>
-	<message key="xmlui.administrative.group.EditGroupForm.submit_add">Add</message>
-	<message key="xmlui.administrative.group.EditGroupForm.submit_remove">Remove</message>
-	<message key="xmlui.administrative.group.EditGroupForm.collection_para">This group is associated with collection: </message>
-	<message key="xmlui.administrative.group.EditGroupForm.community_para">This group is associated with community: </message>
-	<message key="xmlui.administrative.group.EditGroupForm.label_name">Change group name: </message>
-	<message key="xmlui.administrative.group.EditGroupForm.label_instructions">This group is associated with a specific collection or community and the name cannot be modified.</message>
-	<message key="xmlui.administrative.group.EditGroupForm.label_search">搜索 members to add: </message>
-	<message key="xmlui.administrative.group.EditGroupForm.submit_search_people">E-People...</message>
-	<message key="xmlui.administrative.group.EditGroupForm.submit_search_groups">群组...</message>
-	<message key="xmlui.administrative.group.EditGroupForm.no_results">Your search found no results...</message>
+	<message key="xmlui.administrative.group.EditGroupForm.pending">即将</message>
+	<message key="xmlui.administrative.group.EditGroupForm.pending_warn">注意, 状态为“即将”的，表示还未保存，请点击保存按钮使改动生效.</message>
+	<message key="xmlui.administrative.group.EditGroupForm.submit_add">添加</message>
+	<message key="xmlui.administrative.group.EditGroupForm.submit_remove">移除</message>
+	<message key="xmlui.administrative.group.EditGroupForm.collection_para">与该组关联的频道: </message>
+	<message key="xmlui.administrative.group.EditGroupForm.community_para">与该组关联的社区: </message>
+	<message key="xmlui.administrative.group.EditGroupForm.label_name">修改群组名称: </message>
+	<message key="xmlui.administrative.group.EditGroupForm.label_instructions">该组已和某个社区或频道关联，不能修改名称.</message>
+	<message key="xmlui.administrative.group.EditGroupForm.label_search">搜索用户添加到群组: </message>
+	<message key="xmlui.administrative.group.EditGroupForm.submit_search_people">搜索用户</message>
+	<message key="xmlui.administrative.group.EditGroupForm.submit_search_groups">搜索群组</message>
+	<message key="xmlui.administrative.group.EditGroupForm.no_results">无匹配的结果...</message>
 	<message key="xmlui.administrative.group.EditGroupForm.epeople_column1">ID</message>
-	<message key="xmlui.administrative.group.EditGroupForm.epeople_column2">Name</message>
-	<message key="xmlui.administrative.group.EditGroupForm.epeople_column3">Email</message>
+	<message key="xmlui.administrative.group.EditGroupForm.epeople_column2">名称</message>
+	<message key="xmlui.administrative.group.EditGroupForm.epeople_column3">电子邮件</message>
 	<message key="xmlui.administrative.group.EditGroupForm.epeople_column4"></message>
 	<message key="xmlui.administrative.group.EditGroupForm.groups_column1">ID</message>
-	<message key="xmlui.administrative.group.EditGroupForm.groups_column2">Name</message>
-	<message key="xmlui.administrative.group.EditGroupForm.groups_column3">Members</message>
+	<message key="xmlui.administrative.group.EditGroupForm.groups_column2">名称</message>
+	<message key="xmlui.administrative.group.EditGroupForm.groups_column3">成员</message>
 	<message key="xmlui.administrative.group.EditGroupForm.groups_column4">频道</message>
 	<message key="xmlui.administrative.group.EditGroupForm.groups_column5"></message>
-	<message key="xmlui.administrative.group.ManageGroupsMain.groups_collection_link">view</message>
-	<message key="xmlui.administrative.group.EditGroupForm.members_head">Members</message>
+	<message key="xmlui.administrative.group.ManageGroupsMain.groups_collection_link">查看</message>
+	<message key="xmlui.administrative.group.EditGroupForm.members_head">成员</message>
 	<message key="xmlui.administrative.group.EditGroupForm.members_column1">ID</message>
-	<message key="xmlui.administrative.group.EditGroupForm.members_column2">Name</message>
+	<message key="xmlui.administrative.group.EditGroupForm.members_column2">名称</message>
 	<message key="xmlui.administrative.group.EditGroupForm.members_column3">Email</message>
 	<message key="xmlui.administrative.group.EditGroupForm.members_column4"></message>
 	<message key="xmlui.administrative.group.EditGroupForm.members_group_name">group: {0}</message>
@@ -1186,7 +1187,7 @@
 	<message key="xmlui.administrative.group.DeleteGroupsConfirm.head">Confirm Deletion</message>
 	<message key="xmlui.administrative.group.DeleteGroupsConfirm.para">The following 群组 will be deleted:</message>
 	<message key="xmlui.administrative.group.DeleteGroupsConfirm.column1">ID</message>
-	<message key="xmlui.administrative.group.DeleteGroupsConfirm.column2">Name</message>
+	<message key="xmlui.administrative.group.DeleteGroupsConfirm.column2">名称</message>
 	<message key="xmlui.administrative.group.DeleteGroupsConfirm.column3">E-People</message>
 	<message key="xmlui.administrative.group.DeleteGroupsConfirm.column4">群组</message>
 
@@ -1201,7 +1202,7 @@
 	<message key="xmlui.administrative.registries.DeleteBitstreamFormatsConfirm.para1">Are you sure the format should be deleted? Any existing bitstreams of this format will be reverted to the unknown bitstream format.</message>
 	<message key="xmlui.administrative.registries.DeleteBitstreamFormatsConfirm.column1">ID</message>
 	<message key="xmlui.administrative.registries.DeleteBitstreamFormatsConfirm.column2">MIME Type</message>
-	<message key="xmlui.administrative.registries.DeleteBitstreamFormatsConfirm.column3">Name</message>
+	<message key="xmlui.administrative.registries.DeleteBitstreamFormatsConfirm.column3">名称</message>
 
 	<!-- org.dspace.app.xmlui.administrative.registries.DeleteMetadataFieldsConfirm.java -->
 	<message key="xmlui.administrative.registries.DeleteMetadataFieldsConfirm.title">Delete Fields</message>
@@ -1211,7 +1212,7 @@
 	<message key="xmlui.administrative.registries.DeleteMetadataFieldsConfirm.warning">WARNING: </message>
 	<message key="xmlui.administrative.registries.DeleteMetadataFieldsConfirm.para2">This will cause an error if any item contains metadata for these fields.</message>
 	<message key="xmlui.administrative.registries.DeleteMetadataFieldsConfirm.column1">ID</message>
-	<message key="xmlui.administrative.registries.DeleteMetadataFieldsConfirm.column2">Name</message>
+	<message key="xmlui.administrative.registries.DeleteMetadataFieldsConfirm.column2">名称</message>
 	<message key="xmlui.administrative.registries.DeleteMetadataFieldsConfirm.column3">Scope Note</message>
 
 	<!-- org.dspace.app.xmlui.administrative.registries.DeleteMetadataSchemaConfirm.java-->
@@ -1223,7 +1224,7 @@
 	<message key="xmlui.administrative.registries.DeleteMetadataSchemaConfirm.para2">This will cause an error if any item contains metadata within this schema.</message>
 	<message key="xmlui.administrative.registries.DeleteMetadataSchemaConfirm.column1">ID</message>
 	<message key="xmlui.administrative.registries.DeleteMetadataSchemaConfirm.column2">Namespace</message>
-	<message key="xmlui.administrative.registries.DeleteMetadataSchemaConfirm.column3">Name</message>
+	<message key="xmlui.administrative.registries.DeleteMetadataSchemaConfirm.column3">名称</message>
 
 	<!-- org.dspace.app.xmlui.administrative.registries.EditBitstreamFormat.java -->
 	<message key="xmlui.administrative.registries.EditBitstreamFormat.title">Bitstream Format</message>
@@ -1231,7 +1232,7 @@
 	<message key="xmlui.administrative.registries.EditBitstreamFormat.head1">New bitstream format</message>
 	<message key="xmlui.administrative.registries.EditBitstreamFormat.head2">Bitstream format: {0}</message>
 	<message key="xmlui.administrative.registries.EditBitstreamFormat.para1">Provide descriptive metadata about the bitstream format below. While format names must be unique, MIME types do not need to be. You may have separate format registry entries for different versions of Microsoft Word, even though the MIME type will be the same for each of them.</message>
-	<message key="xmlui.administrative.registries.EditBitstreamFormat.name">Name</message>
+	<message key="xmlui.administrative.registries.EditBitstreamFormat.name">名称</message>
 	<message key="xmlui.administrative.registries.EditBitstreamFormat.name_help">A unique name for this format, (e.g. Microsoft Word XP or Microsoft Word 2000)</message>
 	<message key="xmlui.administrative.registries.EditBitstreamFormat.name_error">The name field is required.</message>
 	<message key="xmlui.administrative.registries.EditBitstreamFormat.mimetype">MIME Type</message>
@@ -1261,7 +1262,7 @@
 	<message key="xmlui.administrative.registries.EditMetadataSchema.submit_delete">Delete fields</message>
 	<message key="xmlui.administrative.registries.EditMetadataSchema.submit_move">Move fields to another schema</message>
 	<message key="xmlui.administrative.registries.EditMetadataSchema.head3">Add new metadata field</message>
-	<message key="xmlui.administrative.registries.EditMetadataSchema.name">Field Name</message>
+	<message key="xmlui.administrative.registries.EditMetadataSchema.name">Field 名称</message>
 	<message key="xmlui.administrative.registries.EditMetadataSchema.note">Scope Note</message>
 	<message key="xmlui.administrative.registries.EditMetadataSchema.note_help">Additional notes about this metadata field.</message>
 	<message key="xmlui.administrative.registries.EditMetadataSchema.submit_add">Add new metadata field</message>
@@ -1282,7 +1283,7 @@
 	<message key="xmlui.administrative.registries.FormatRegistryMain.new_link">Add a new bitstream format</message>
 	<message key="xmlui.administrative.registries.FormatRegistryMain.column1"></message>
 	<message key="xmlui.administrative.registries.FormatRegistryMain.column2">ID</message>
-	<message key="xmlui.administrative.registries.FormatRegistryMain.column3">Name</message>
+	<message key="xmlui.administrative.registries.FormatRegistryMain.column3">名称</message>
 	<message key="xmlui.administrative.registries.FormatRegistryMain.column4">MIME Type</message>
 	<message key="xmlui.administrative.registries.FormatRegistryMain.column5">Support Level</message>
 	<message key="xmlui.administrative.registries.FormatRegistryMain.internal">(<i>internal</i>)</message>
@@ -1298,13 +1299,13 @@
 	<message key="xmlui.administrative.registries.MetadataRegistryMain.column1"></message>
 	<message key="xmlui.administrative.registries.MetadataRegistryMain.column2">ID</message>
 	<message key="xmlui.administrative.registries.MetadataRegistryMain.column3">Namespace</message>
-	<message key="xmlui.administrative.registries.MetadataRegistryMain.column4">Name</message>
+	<message key="xmlui.administrative.registries.MetadataRegistryMain.column4">名称</message>
 	<message key="xmlui.administrative.registries.MetadataRegistryMain.submit_delete">Delete schema</message>
 	<message key="xmlui.administrative.registries.MetadataRegistryMain.head2">Add a new schema</message>
 	<message key="xmlui.administrative.registries.MetadataRegistryMain.namespace">Namespace</message>
 	<message key="xmlui.administrative.registries.MetadataRegistryMain.namespace_help">Namespace should be an established URI location for the new schema.</message>
 	<message key="xmlui.administrative.registries.MetadataRegistryMain.namespace_error">This field is required.</message>
-	<message key="xmlui.administrative.registries.MetadataRegistryMain.name">Name</message>
+	<message key="xmlui.administrative.registries.MetadataRegistryMain.name">名称</message>
 	<message key="xmlui.administrative.registries.MetadataRegistryMain.name_help">Shorthand notation for the schema. This will be used to prefix a field's name (e.g. dc.element.qualifier). The name must be less than 32 characters and cannot include spaces, periods or underscores.</message>
 	<message key="xmlui.administrative.registries.MetadataRegistryMain.name_error">This field is required and must be less than 32 characters and cannot contain any spaces, periods, or underscores.</message>
 	<message key="xmlui.administrative.registries.MetadataRegistryMain.submit_add">Add new schema</message>
@@ -1315,7 +1316,7 @@
 	<message key="xmlui.administrative.registries.MoveMetadataField.head1">Move metadata fields</message>
 	<message key="xmlui.administrative.registries.MoveMetadataField.para1">Select a target schema where these fields will be moved. If the target schema already has fields with identical names the fields will not be moved.</message>
 	<message key="xmlui.administrative.registries.MoveMetadataField.column1">ID</message>
-	<message key="xmlui.administrative.registries.MoveMetadataField.column2">Name</message>
+	<message key="xmlui.administrative.registries.MoveMetadataField.column2">名称</message>
 	<message key="xmlui.administrative.registries.MoveMetadataField.column3">Scope Note</message>
 	<message key="xmlui.administrative.registries.MoveMetadataField.para2">Move to schema: </message>
 	<message key="xmlui.administrative.registries.MoveMetadataField.submit_move">Move fields</message>
@@ -1350,7 +1351,7 @@
 	<message key="xmlui.administrative.authorization.EditContainerPolicies.main_add_link">Click here to add a new policy. </message>
 	<message key="xmlui.administrative.authorization.EditContainerPolicies.submit_add">Add</message>
 	<message key="xmlui.administrative.authorization.EditContainerPolicies.head_id">ID</message>
-	<message key="xmlui.administrative.authorization.EditContainerPolicies.head_name">Name</message>
+	<message key="xmlui.administrative.authorization.EditContainerPolicies.head_name">名称</message>
 	<message key="xmlui.administrative.authorization.EditContainerPolicies.head_action">Action</message>
 	<message key="xmlui.administrative.authorization.EditContainerPolicies.head_group">Group</message>
 	<message key="xmlui.administrative.authorization.EditContainerPolicies.head_start_date">Start Date</message>
@@ -1385,7 +1386,7 @@
 	<message key="xmlui.administrative.authorization.EditPolicyForm.error_no_action">No action selected</message>
 	<message key="xmlui.administrative.authorization.EditPolicyForm.groups_column4"></message>
 	<message key="xmlui.administrative.authorization.EditPolicyForm.groups_column1">ID</message>
-	<message key="xmlui.administrative.authorization.EditPolicyForm.groups_column2">Name</message>
+	<message key="xmlui.administrative.authorization.EditPolicyForm.groups_column2">名称</message>
 	<message key="xmlui.administrative.authorization.EditPolicyForm.groups_column3">Actions for this resource</message>
 
 	<message key="xmlui.administrative.authorization.EditPolicyForm.set_group">Set</message>
@@ -1396,7 +1397,7 @@
 	<message key="xmlui.administrative.authorization.EditPolicyForm.submit_search_groups">搜索</message>
 	<message key="xmlui.administrative.authorization.EditPolicyForm.label_action">Select the action</message>
 
-	<message key="xmlui.administrative.authorization.EditPolicyForm.label_name">Name</message>
+	<message key="xmlui.administrative.authorization.EditPolicyForm.label_name">名称</message>
 	<message key="xmlui.administrative.authorization.EditPolicyForm.label_description">Description</message>
 	<message key="xmlui.administrative.authorization.EditPolicyForm.label_start_date">Start Date</message>
 	<message key="xmlui.administrative.authorization.EditPolicyForm.label_end_date">End Date</message>
@@ -1422,7 +1423,7 @@
 	<message key="xmlui.administrative.authorization.AdvacedAuthorizationsForm.submit_remove_all">Clear policies</message>
 	<message key="xmlui.administrative.authorization.AdvacedAuthorizationsForm.label_date_help">Accepted format: yyyy, yyyy-mm, yyyy-mm-dd</message>
 
-	<message key="xmlui.administrative.authorization.AdvancedAuthorizationsForm.actions_name">Name</message>
+	<message key="xmlui.administrative.authorization.AdvancedAuthorizationsForm.actions_name">名称</message>
 	<message key="xmlui.administrative.authorization.AdvancedAuthorizationsForm.actions_description">Description</message>
 	<message key="xmlui.administrative.authorization.AdvancedAuthorizationsForm.actions_start_date">Start Date</message>
 	<message key="xmlui.administrative.authorization.AdvancedAuthorizationsForm.actions_end_date">End Date</message>
@@ -1508,7 +1509,7 @@
 	<message key="xmlui.administrative.item.DeleteBitstreamConfirm.trail">Confirm deletion</message>
 	<message key="xmlui.administrative.item.DeleteBitstreamConfirm.head1">Confirm Deletion(s)</message>
 	<message key="xmlui.administrative.item.DeleteBitstreamConfirm.para1">Are you sure you want to delete these bitstreams:</message>
-	<message key="xmlui.administrative.item.DeleteBitstreamConfirm.column1">Name</message>
+	<message key="xmlui.administrative.item.DeleteBitstreamConfirm.column1">名称</message>
 	<message key="xmlui.administrative.item.DeleteBitstreamConfirm.column2">Description</message>
 	<message key="xmlui.administrative.item.DeleteBitstreamConfirm.column3">Format</message>
 
@@ -1562,7 +1563,7 @@
 	<message key="xmlui.administrative.item.EditItemBitstreamsForm.trail">Item bitstreams</message>
 	<message key="xmlui.administrative.item.EditItemBitstreamsForm.head1">Bitstreams</message>
 	<message key="xmlui.administrative.item.EditItemBitstreamsForm.column1"></message>
-	<message key="xmlui.administrative.item.EditItemBitstreamsForm.column2">Name</message>
+	<message key="xmlui.administrative.item.EditItemBitstreamsForm.column2">名称</message>
 	<message key="xmlui.administrative.item.EditItemBitstreamsForm.column3">Description</message>
 	<message key="xmlui.administrative.item.EditItemBitstreamsForm.column4">Format</message>
 	<message key="xmlui.administrative.item.EditItemBitstreamsForm.column5">View</message>
@@ -1584,14 +1585,14 @@
 	<message key="xmlui.administrative.item.EditItemMetadataForm.title">Item Metadata</message>
 	<message key="xmlui.administrative.item.EditItemMetadataForm.trail">Item metadata</message>
 	<message key="xmlui.administrative.item.EditItemMetadataForm.head1">Add new metadata</message>
-	<message key="xmlui.administrative.item.EditItemMetadataForm.name_label">Name</message>
+	<message key="xmlui.administrative.item.EditItemMetadataForm.name_label">名称</message>
 	<message key="xmlui.administrative.item.EditItemMetadataForm.value_label">Value</message>
 	<message key="xmlui.administrative.item.EditItemMetadataForm.lang_label">Language</message>
 	<message key="xmlui.administrative.item.EditItemMetadataForm.submit_add">Add new metadata</message>
 	<message key="xmlui.administrative.item.EditItemMetadataForm.para1">PLEASE NOTE: These changes are not validated in any way. You are responsible for entering the data in the correct format. If you are not sure what the format is, please do NOT make changes.</message>
 	<message key="xmlui.administrative.item.EditItemMetadataForm.head2">Metadata</message>
 	<message key="xmlui.administrative.item.EditItemMetadataForm.column1">Remove</message>
-	<message key="xmlui.administrative.item.EditItemMetadataForm.column2">Name</message>
+	<message key="xmlui.administrative.item.EditItemMetadataForm.column2">名称</message>
 	<message key="xmlui.administrative.item.EditItemMetadataForm.column3">Value</message>
 	<message key="xmlui.administrative.item.EditItemMetadataForm.column4">Language</message>
 
@@ -1785,7 +1786,7 @@
 	<message key="xmlui.administrative.collection.EditCollectionMetadataForm.title">编辑 频道 Metadata</message>
 	<message key="xmlui.administrative.collection.EditCollectionMetadataForm.trail">Metadata</message>
 	<message key="xmlui.administrative.collection.EditCollectionMetadataForm.main_head">编辑 频道: {0}</message>
-	<message key="xmlui.administrative.collection.EditCollectionMetadataForm.label_name">Name</message>
+	<message key="xmlui.administrative.collection.EditCollectionMetadataForm.label_name">名称</message>
 	<message key="xmlui.administrative.collection.EditCollectionMetadataForm.label_short_description">Short Description</message>
 	<message key="xmlui.administrative.collection.EditCollectionMetadataForm.label_introductory_text">Introductory text (HTML)</message>
 	<message key="xmlui.administrative.collection.EditCollectionMetadataForm.label_copyright_text">Copyright text (HTML)</message>
@@ -1861,9 +1862,9 @@
 	<message key="xmlui.administrative.ControlPanel.harvest_label_actions">Actions</message>
 	<message key="xmlui.administrative.ControlPanel.harvest_submit_start">Start Harvester</message>
 	<message key="xmlui.administrative.ControlPanel.harvest_submit_reset">Reset Harvest Status</message>
-	<message key="xmlui.administrative.ControlPanel.harvest_submit_resume">Resume</message>
-	<message key="xmlui.administrative.ControlPanel.harvest_submit_pause">Pause</message>
-	<message key="xmlui.administrative.ControlPanel.harvest_submit_stop">Stop</message>
+	<message key="xmlui.administrative.ControlPanel.harvest_submit_resume">继续</message>
+	<message key="xmlui.administrative.ControlPanel.harvest_submit_pause">暂停</message>
+	<message key="xmlui.administrative.ControlPanel.harvest_submit_stop">停止</message>
 	<message key="xmlui.administrative.ControlPanel.harvest_label_collections">Collections set up for harvesting</message>
 	<message key="xmlui.administrative.ControlPanel.harvest_label_active">Active harvests</message>
 	<message key="xmlui.administrative.ControlPanel.harvest_label_queued">Queued harvests</message>
@@ -1924,7 +1925,7 @@
 	<message key="xmlui.administrative.community.EditCommunityMetadataForm.trail">Metadata</message>
 	<message key="xmlui.administrative.community.EditCommunityMetadataForm.main_head">编辑 Metadata for 社区 {0}</message>
 	<message key="xmlui.administrative.community.EditCommunityMetadataForm.edit_authorizations">编辑 authorization policies</message>
-	<message key="xmlui.administrative.community.EditCommunityMetadataForm.label_name">Name</message>
+	<message key="xmlui.administrative.community.EditCommunityMetadataForm.label_name">名称</message>
 	<message key="xmlui.administrative.community.EditCommunityMetadataForm.label_short_description">Short Description</message>
 	<message key="xmlui.administrative.community.EditCommunityMetadataForm.label_introductory_text">Introductory text (HTML)</message>
 	<message key="xmlui.administrative.community.EditCommunityMetadataForm.label_copyright_text">Copyright text (HTML)</message>
@@ -1955,7 +1956,7 @@
 	<message key="xmlui.administrative.ControlPanel.java_head">Java and Operating System</message>
 	<message key="xmlui.administrative.ControlPanel.java_version">Java Runtime Environment Version</message>
 	<message key="xmlui.administrative.ControlPanel.java_vendor">Java Runtime Environment Vendor</message>
-	<message key="xmlui.administrative.ControlPanel.os_name">Operating System Name</message>
+	<message key="xmlui.administrative.ControlPanel.os_name">Operating System 名称</message>
 	<message key="xmlui.administrative.ControlPanel.os_arch">Operating System Architecture</message>
 	<message key="xmlui.administrative.ControlPanel.os_version">Operating System Version</message>
 	<message key="xmlui.administrative.ControlPanel.runtime_head">Runtime statistics</message>
@@ -1976,9 +1977,9 @@
 	<message key="xmlui.administrative.ControlPanel.dspace_version">DSpace Version</message>
 	<message key="xmlui.administrative.ControlPanel.dspace_dir">DSpace Installation Directory</message>
 	<message key="xmlui.administrative.ControlPanel.dspace_url">DSpace Base URL</message>
-	<message key="xmlui.administrative.ControlPanel.dspace_hostname">DSpace Host Name</message>
-	<message key="xmlui.administrative.ControlPanel.dspace_name">Name of the Site</message>
-	<message key="xmlui.administrative.ControlPanel.db_name">Database Name</message>
+	<message key="xmlui.administrative.ControlPanel.dspace_hostname">DSpace Host 名称</message>
+	<message key="xmlui.administrative.ControlPanel.dspace_name">名称 of the Site</message>
+	<message key="xmlui.administrative.ControlPanel.db_name">Database 名称</message>
 	<message key="xmlui.administrative.ControlPanel.db_url">Database URL</message>
 	<message key="xmlui.administrative.ControlPanel.db_driver">JDBC Driver</message>
 	<message key="xmlui.administrative.ControlPanel.db_maxconnections">Maximum Number of DB Connections in Pool</message>
@@ -2369,16 +2370,16 @@
 	<message key="xmlui.ChoiceLookupTransformer.lookup">Lookup</message>
 
 	<!-- Choice Lookup - sample config for dc.publisher field -->
-	<message key="xmlui.ChoiceLookupTransformer.field.dc_publisher.help">Name of 出版者</message>
+	<message key="xmlui.ChoiceLookupTransformer.field.dc_publisher.help">名称 of 出版者</message>
 	<message key="xmlui.ChoiceLookupTransformer.field.dc_publisher.title">Look up 出版者</message>
 	<!-- Params are: search-value -->
 	<message key="xmlui.ChoiceLookupTransformer.field.dc_publisher.nonauthority">Non-authority value: @1@</message>
 
 	<!-- Choice Lookup - sample config for dc.contributor.author field -->
-	<message key="xmlui.ChoiceLookupTransformer.field.dc_contributor_author.help">Name in "Last, First" format</message>
+	<message key="xmlui.ChoiceLookupTransformer.field.dc_contributor_author.help">名称 in "Last, First" format</message>
 	<message key="xmlui.ChoiceLookupTransformer.field.dc_contributor_author.help.last">Last name, e.g. "Smith"</message>
 	<message key="xmlui.ChoiceLookupTransformer.field.dc_contributor_author.help.first">姓(s) e.g. "Fred"</message>
-	<message key="xmlui.ChoiceLookupTransformer.field.dc_contributor_author.title">LC Name Authority author lookup</message>
+	<message key="xmlui.ChoiceLookupTransformer.field.dc_contributor_author.title">LC 名称 Authority author lookup</message>
 	<message key="xmlui.ChoiceLookupTransformer.field.dc_contributor_author.nonauthority">Local value "@1@" (not in Naming Authority)</message>
 
 	<!-- mobile theme -->
