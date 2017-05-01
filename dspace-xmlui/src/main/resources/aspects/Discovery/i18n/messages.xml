@@ -35,45 +35,45 @@
     <message key="xmlui.Discovery.RecentSubmissions.RecentSubmissionTransformer.trail">最近添加</message>
     <message key="xmlui.Discovery.RecentSubmissions.RecentSubmissionTransformer.recent.head">最近添加</message>
 
-    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_type_filter">Kind</message>
+    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_type_filter">种类</message>
     <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_publisher_filter">出版者</message>
 
 
-    <message key="xmlui.ArtifactBrowser.AbstractSearch.sort_by.ispartof">Parent</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.sort_by.ispartof">属于</message>
 
-    <message key="xmlui.ArtifactBrowser.AbstractSearch.group_by">Group Results By</message>
-    <message key="xmlui.ArtifactBrowser.AbstractSearch.group_by.none">None</message>
-
-
-    <message key="xmlui.ArtifactBrowser.AbstractSearch.group_by.publication_grp">Publication</message>
-
-    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_location.comm">Community</message>
-    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_location.coll">Collection</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.group_by">分组依据</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.group_by.none">空</message>
 
 
-    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_dc.relation.ispartofseries_filter">Series</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.group_by.publication_grp">刊物</message>
 
-    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_dc.contributor.author_browse">浏览 by: 作者</message>
-    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_dc.title_browse">浏览 by: 标题</message>
-    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_dc.subject_browse">浏览 by: 标签</message>
+    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_location.comm">社区</message>
+    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_location.coll">频道</message>
 
-    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_dc.description.abstract_browse">浏览 by: Abstract</message>
-    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_series_browse">浏览 by: Series</message>
-    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_sponsor_browse">浏览 by: Sponsor</message>
-    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_identifier_browse">浏览 by: Identifier</message>
-    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_language_browse">浏览 by: Language (ISO)</message>
-    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_keyword_browse">浏览 by: Keyword</message>
-    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_taxon_browse">浏览 by: Scientific Name</message>
-    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_contributor_browse">浏览 by: Contributor</message>
-    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_creator_browse">浏览 by: Creator</message>
-    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_subject_browse">浏览 by: 标签</message>
-    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_description_browse">浏览 by: Description</message>
-    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_relation_browse">浏览 by: Relation</message>
-    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_mime_browse">浏览 by: Mime-Type</message>
-    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_other_browse">浏览 by: Other Contributor</message>
-    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_advisor_browse">浏览 by: Advisor</message>
-    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_department_browse">浏览 by: Department</message>
-    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_dateissued_dt_browse">浏览 by: Issue date</message>
+
+    <message key="xmlui.ArtifactBrowser.AdvancedSearch.type_dc.relation.ispartofseries_filter">系列</message>
+
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_dc.contributor.author_browse">根据作者浏览</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_dc.title_browse">根据标题浏览</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_dc.subject_browse">根据标签浏览</message>
+
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_dc.description.abstract_browse">浏览依据摘要</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_series_browse">浏览依据系列</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_sponsor_browse">浏览依据赞助人</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_identifier_browse">浏览依据ID</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_language_browse">浏览依据语言 (ISO)</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_keyword_browse">浏览依据关键字</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_taxon_browse">浏览依据科学名称</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_contributor_browse">浏览依据协作人</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_creator_browse">浏览依据创建人</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_subject_browse">浏览依据标签</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_description_browse">浏览依据描述</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_relation_browse">浏览依据关系</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_mime_browse">浏览依据Mime-类型</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_other_browse">浏览依据其他协作人</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_advisor_browse">浏览依据顾问</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_department_browse">浏览依据部门</message>
+    <message key="xmlui.ArtifactBrowser.AbstractSearch.type_dateissued_dt_browse">浏览依据发布日期</message>
 
     <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.title">标题</message>
     <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.dateIssued">发布时间</message>
@@ -82,10 +82,10 @@
 
     <message key="xmlui.dri2xhtml.structural.pagination-info.nototal">以下是项目 {0}-{1}</message>
 
-    <message key="xmlui.Discovery.AbstractSearch.type_author">Filter by: 作者</message>
+    <message key="xmlui.Discovery.AbstractSearch.type_author">依据作者过滤</message>
     <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.author">作者</message>
     <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.author_filter">作者</message>
-    <message key="xmlui.Discovery.AbstractSearch.type_subject">Filter by: 标签</message>
+    <message key="xmlui.Discovery.AbstractSearch.type_subject">依据标签过滤</message>
     <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.subject">标签</message>
     <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.subject_filter">标签</message>
     <message key="xmlui.ArtifactBrowser.SimpleSearch.filter.dateIssued.year">发布日期</message>
@@ -112,7 +112,7 @@
     <message key="xmlui.Discovery.AbstractSearch.filters.controls.current-filters.head">当前过滤器:</message>
     <message key="xmlui.Discovery.AbstractSearch.filters.display">添加过滤</message>
 
-    <message key="xmlui.discovery.SearchFacetFilter.no-results">No filter values found</message>
+    <message key="xmlui.discovery.SearchFacetFilter.no-results">没有过滤结果</message>
 
     <message key="xmlui.discovery.AbstractFiltersTransformer.filters.head">发现</message>
     <message key="xmlui.discovery.AbstractFiltersTransformer.filters.view-more">... 查看更多</message>
@@ -130,8 +130,8 @@
     <message key="xmlui.Discovery.SimpleSearch.filter.notequals">不等于</message>
     <message key="xmlui.Discovery.SimpleSearch.filter.notauthority">不包含ID</message>
 
-    <message key="xmlui.Discovery.RelatedItems.head">Related items</message>
-    <message key="xmlui.Discovery.RelatedItems.help">Showing items related by title, author, creator and subject.</message>
+    <message key="xmlui.Discovery.RelatedItems.head">相关项目</message>
+    <message key="xmlui.Discovery.RelatedItems.help">显示标题，作者，创作者和主题相关的项目。</message>
 
     <message key="xmlui.Discovery.AbstractSearch.head1_community">以下显示 {0} 条结果 ，共 {1} 条结果在 {2} 社区中. <span class="searchTime">({3} 秒)</span></message>
     <message key="xmlui.Discovery.AbstractSearch.head1_collection">以下显示 {0} 条结果 ，共 {1} 条结果在 {2} 频道中. <span class="searchTime">({3} 秒)</span></message>
@@ -140,7 +140,7 @@
     <message key="xmlui.Discovery.AbstractSearch.head2">符合搜索条件的社区和频道</message>
     <message key="xmlui.Discovery.AbstractSearch.head3">符合搜索条件的项目</message>
 
-    <message key="xmlui.Discovery.SimpleSearch.did_you_mean">Did you mean: </message>
+    <message key="xmlui.Discovery.SimpleSearch.did_you_mean">您是不是想要: </message>
 
 
 
