@@ -46,7 +46,7 @@
          <!--<label>Authors</label>-->
          <label>作者</label>
          <input-type>name</input-type>
-         <hint>请输入作者.</hint>
+         <hint>请输入作者.点击右侧“添加”可输入多个作者。</hint>
          <required></required>
        </field>
 
@@ -68,7 +68,7 @@
          <repeatable>true</repeatable>
          <label>其他标题</label>
          <input-type>onebox</input-type>
-         <hint>如果该项目有任何其他标题，请在这里输入.</hint>
+         <hint>请在这里输入其他标题，例如副标题，点击右侧“添加”可输入多个标题。</hint>
          <required></required>
        </field>
 

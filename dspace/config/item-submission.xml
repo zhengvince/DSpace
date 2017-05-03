@@ -247,15 +247,16 @@
        </step>
        -->
 
- 	  <!--Step 5 will be to Verify/Review everything -->
- 	  <step>
+              <!--Step 5 will be to Verify/Review everything -->
+       <!-- vince 删除复核页
+       <step>
         <heading>submit.progressbar.verify</heading>
         <processing-class>org.dspace.submit.step.VerifyStep</processing-class>
- 	    <jspui-binding>org.dspace.app.webui.submit.step.JSPVerifyStep</jspui-binding>
-		<xmlui-binding>org.dspace.app.xmlui.aspect.submission.submit.ReviewStep</xmlui-binding>
-		<workflow-editable>true</workflow-editable>
+         <jspui-binding>org.dspace.app.webui.submit.step.JSPVerifyStep</jspui-binding>
+        <xmlui-binding>org.dspace.app.xmlui.aspect.submission.submit.ReviewStep</xmlui-binding>
+        <workflow-editable>true</workflow-editable>
       </step>
-
+      -->
       <!--Step 6 will be to select a Creative Commons License-->
       <!-- Uncomment this step to allow the user to select a Creative Commons license -->
        <!--
@@ -269,6 +270,7 @@
       -->
 
       <!--Step 7 will be to Sign off on the License-->
+       <!-- vince 删除权限页
       <step>
         <heading>submit.progressbar.license</heading>
         <processing-class>org.dspace.submit.step.LicenseStep</processing-class>
@@ -276,7 +278,7 @@
 		<xmlui-binding>org.dspace.app.xmlui.aspect.submission.submit.LicenseStep</xmlui-binding>
 		<workflow-editable>false</workflow-editable>
       </step>
-
+    -->
 
      
    </submission-process>
