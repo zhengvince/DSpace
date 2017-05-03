@@ -35,7 +35,7 @@
  <!-- serves as a 'this field is required' flag.                           -->
 
  <form-definitions>
-
+<!--vince 提交项目时的描述-->
    <form name="traditional">
      <page number="1">
        <field>
@@ -73,86 +73,85 @@
          <!--<required></required>-->
        <!--</field>-->
 
-       <field>
-         <dc-schema>dc</dc-schema>
-         <dc-element>date</dc-element>
-         <dc-qualifier>issued</dc-qualifier>
-         <repeatable>false</repeatable>
-         <label>日期</label>
-         <input-type>date</input-type>
-         <hint>请提供以前出版或公开发行的日期,如果没有，可以仅输入一个年份.</hint>
-         <required>至少输入一个年份.</required>
-       </field>
+       <!--<field>-->
+         <!--<dc-schema>dc</dc-schema>-->
+         <!--<dc-element>date</dc-element>-->
+         <!--<dc-qualifier>issued</dc-qualifier>-->
+         <!--<repeatable>false</repeatable>-->
+         <!--<label>日期</label>-->
+         <!--<input-type>date</input-type>-->
+         <!--<hint>请提供以前出版或公开发行的日期,如果没有，可以仅输入一个年份.</hint>-->
+         <!--<required>至少输入一个年份.</required>-->
+       <!--</field>-->
+       <!-- vince 删除了一个字段-->
+       <!--<field>-->
+         <!--<dc-schema>dc</dc-schema>-->
+         <!--<dc-element>publisher</dc-element>-->
+         <!--<dc-qualifier></dc-qualifier>-->
+         <!--<repeatable>false</repeatable>-->
+         <!--<label>出版商</label>-->
+         <!--<input-type>onebox</input-type>-->
+         <!--<hint>此项目的出版商.</hint>-->
+         <!--<required></required>-->
+       <!--</field>-->
+       <!-- vince 删除了一个字段-->
+       <!--<field>-->
+         <!--<dc-schema>dc</dc-schema>-->
+         <!--<dc-element>identifier</dc-element>-->
+         <!--<dc-qualifier>citation</dc-qualifier>-->
+         <!--<repeatable>false</repeatable>-->
+         <!--<label>引文</label>-->
+         <!--<input-type>onebox</input-type>-->
+         <!--<hint>输入此项目的引用.</hint>-->
+         <!--<required></required>-->
+       <!--</field>-->
 
-       <field>
-         <dc-schema>dc</dc-schema>
-         <dc-element>publisher</dc-element>
-         <dc-qualifier></dc-qualifier>
-         <repeatable>false</repeatable>
-         <label>出版商</label>
-         <input-type>onebox</input-type>
-         <hint>此项目的出版商.</hint>
-         <required></required>
-       </field>
+       <!--<field>-->
+         <!--<dc-schema>dc</dc-schema>-->
+         <!--<dc-element>relation</dc-element>-->
+         <!--<dc-qualifier>ispartofseries</dc-qualifier>-->
+         <!--<repeatable>true</repeatable>-->
+         <!--<label>系列/编号.</label>-->
+         <!--<input-type>series</input-type>-->
+         <!--<hint>如果该项目属于一个系列，可以输入系列名和当前项目的编号.</hint>-->
+         <!--<required></required>-->
+       <!--</field>-->
+       <!-- vince 删除了一个字段-->
+       <!--<field>-->
+         <!--<dc-schema>dc</dc-schema>-->
+         <!--<dc-element>identifier</dc-element>-->
+         <!--<dc-qualifier></dc-qualifier>-->
+         <!--&lt;!&ndash; An input-type of qualdrop_value MUST be marked as repeatable &ndash;&gt;-->
+         <!--<repeatable>true</repeatable>-->
+         <!--<label>ID标识</label>-->
+         <!--<input-type value-pairs-name="common_identifiers">qualdrop_value</input-type>-->
+         <!--<hint>输入ID标识号（identification）.</hint>-->
+         <!--<required></required>-->
+       <!--</field>-->
+       <!-- vince 删除了一个字段-->
+       <!--<field>-->
+         <!--<dc-schema>dc</dc-schema>-->
+         <!--<dc-element>type</dc-element>-->
+         <!--<dc-qualifier></dc-qualifier>-->
+         <!--<repeatable>true</repeatable>-->
+         <!--<label>类型</label>-->
+         <!--<input-type value-pairs-name="common_types">dropdown</input-type>-->
+         <!--<hint>项目的内容类型。 如果需要多选，请按“CTRL”或“Shift”键.</hint>-->
+         <!--<required></required>-->
+       <!--</field>-->
 
-       <field>
-         <dc-schema>dc</dc-schema>
-         <dc-element>identifier</dc-element>
-         <dc-qualifier>citation</dc-qualifier>
-         <repeatable>false</repeatable>
-         <label>引文</label>
-         <input-type>onebox</input-type>
-         <hint>输入此项目的引用.</hint>
-         <required></required>
-       </field>
+       <!--<field>-->
+         <!--<dc-schema>dc</dc-schema>-->
+         <!--<dc-element>language</dc-element>-->
+         <!--<dc-qualifier>iso</dc-qualifier>-->
+         <!--<repeatable>false</repeatable>-->
+         <!--<label>语言</label>-->
+         <!--<input-type value-pairs-name="common_iso_languages">dropdown</input-type>-->
+         <!--<hint>选择项目主要内容的语言。 如果下拉列表中没有，请选择“其他”。 如果内容实际上没有语言（例如，数据或图片），请选择“N/A”。</hint>-->
+         <!--<required></required>-->
+       <!--</field>-->
+     <!--</page>-->
 
-       <field>
-         <dc-schema>dc</dc-schema>
-         <dc-element>relation</dc-element>
-         <dc-qualifier>ispartofseries</dc-qualifier>
-         <repeatable>true</repeatable>
-         <label>系列/编号.</label>
-         <input-type>series</input-type>
-         <hint>如果该项目属于一个系列，可以输入系列名和当前项目的编号.</hint>
-         <required></required>
-       </field>
-
-       <field>
-         <dc-schema>dc</dc-schema>
-         <dc-element>identifier</dc-element>
-         <dc-qualifier></dc-qualifier>
-         <!-- An input-type of qualdrop_value MUST be marked as repeatable -->
-         <repeatable>true</repeatable>
-         <label>ID标识</label>
-         <input-type value-pairs-name="common_identifiers">qualdrop_value</input-type>
-         <hint>输入ID标识号（identification）.</hint>
-         <required></required>
-       </field>
-
-       <field>
-         <dc-schema>dc</dc-schema>
-         <dc-element>type</dc-element>
-         <dc-qualifier></dc-qualifier>
-         <repeatable>true</repeatable>
-         <label>类型</label>
-         <input-type value-pairs-name="common_types">dropdown</input-type>
-         <hint>项目的内容类型。 如果需要多选，请按“CTRL”或“Shift”键.</hint>
-         <required></required>
-       </field>
-
-       <field>
-         <dc-schema>dc</dc-schema>
-         <dc-element>language</dc-element>
-         <dc-qualifier>iso</dc-qualifier>
-         <repeatable>false</repeatable>
-         <label>语言</label>
-         <input-type value-pairs-name="common_iso_languages">dropdown</input-type>
-         <hint>选择项目主要内容的语言。 如果下拉列表中没有，请选择“其他”。 如果内容实际上没有语言（例如，数据或图片），请选择“N/A”。</hint>
-         <required></required>
-       </field>
-     </page>
-
-     <page number="2">
        <field>
          <dc-schema>dc</dc-schema>
          <dc-element>subject</dc-element>
@@ -177,27 +176,27 @@
          <required></required>
        </field>
 
-       <field>
-         <dc-schema>dc</dc-schema>
-         <dc-element>description</dc-element>
-         <dc-qualifier>sponsorship</dc-qualifier>
-         <repeatable>false</repeatable>
-         <label>赞助商</label>
-         <input-type>textarea</input-type>
-         <hint>在框中输入任何赞助商或公司代码. </hint>
-         <required></required>
-       </field>
+       <!--<field>-->
+         <!--<dc-schema>dc</dc-schema>-->
+         <!--<dc-element>description</dc-element>-->
+         <!--<dc-qualifier>sponsorship</dc-qualifier>-->
+         <!--<repeatable>false</repeatable>-->
+         <!--<label>赞助商</label>-->
+         <!--<input-type>textarea</input-type>-->
+         <!--<hint>在框中输入任何赞助商或公司代码. </hint>-->
+         <!--<required></required>-->
+       <!--</field>-->
 
-       <field>
-         <dc-schema>dc</dc-schema>
-         <dc-element>description</dc-element>
-         <dc-qualifier></dc-qualifier>
-         <repeatable>false</repeatable>
-         <label>说明</label>
-         <input-type>textarea</input-type>
-         <hint>在此框中输入任何其他说明或注释. </hint>
-         <required></required>
-       </field>
+       <!--<field>-->
+         <!--<dc-schema>dc</dc-schema>-->
+         <!--<dc-element>description</dc-element>-->
+         <!--<dc-qualifier></dc-qualifier>-->
+         <!--<repeatable>false</repeatable>-->
+         <!--<label>说明</label>-->
+         <!--<input-type>textarea</input-type>-->
+         <!--<hint>在此框中输入任何其他说明或注释. </hint>-->
+         <!--<required></required>-->
+       <!--</field>-->
      </page>
    </form>
 
