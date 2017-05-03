@@ -836,7 +836,7 @@
 	<message key="xmlui.Submission.submit.UploadWithEmbargoStep.virus_error">上传失败，因为它可能包含病毒。请联系系统管理员。</message>
 	<message key="xmlui.Submission.submit.UploadWithEmbargoStep.virus_checker_error">上传失败，因为无法扫描文件。请联系系统管理员。</message>
 	<message key="xmlui.Submission.submit.UploadWithEmbargoStep.description">文件描述</message>
-	<message key="xmlui.Submission.submit.UploadWithEmbargoStep.description_help">可选，提供文件的简要说明，例如“<i>文章主体</ i>”或“<i>相关依据</ i>”.</message>
+	<message key="xmlui.Submission.submit.UploadWithEmbargoStep.description_help">可选，提供文件的简要说明，例如“<i>文章主体</i>”或“<i>相关依据</i>”.</message>
 	<message key="xmlui.Submission.submit.UploadWithEmbargoStep.submit_upload">上传文件＆amp;继续添加</message>
 	<message key="xmlui.Submission.submit.UploadWithEmbargoStep.head2">已上传文件</message>
 	<message key="xmlui.Submission.submit.UploadWithEmbargoStep.column0">主要</message>
@@ -861,7 +861,7 @@
 	<message key="xmlui.Submission.submit.EditFileStep.head">编辑文件</message>
 	<message key="xmlui.Submission.submit.EditFileStep.file">文件</message>
 	<message key="xmlui.Submission.submit.EditFileStep.description">文件描述</message>
-	<message key="xmlui.Submission.submit.EditFileStep.description_help">可选, 提供文件的简要说明，例如“<i>文章主体</ i>”或“<i>相关依据</ i>”.</message>
+	<message key="xmlui.Submission.submit.EditFileStep.description_help">可选, 提供文件的简要说明，例如“<i>文章主体</i>”或“<i>相关依据</i>”.</message>
 	<message key="xmlui.Submission.submit.EditFileStep.info1">下拉选择文件格式, 例如 "<i>Adobe PDF</i>" or "<i>Microsoft Word</i>." <strong>如果列表中没有您要选择的格式</strong>, 请在下方的输入框中描述.</message>
 	<message key="xmlui.Submission.submit.EditFileStep.format_detected">检测格式</message>
 	<message key="xmlui.Submission.submit.EditFileStep.format_selected">所选格式</message>
@@ -931,7 +931,7 @@
 	<message key="xmlui.Submission.workflow.PerformTaskStep.approve_submit">批准项目</message>
 	<message key="xmlui.Submission.workflow.PerformTaskStep.commit_help">编辑该项目后，使用此选项将项目提交到系统归档。</message>
 	<message key="xmlui.Submission.workflow.PerformTaskStep.commit_submit">编辑并归档</message>
-	<message key="xmlui.Submission.workflow.PerformTaskStep.reject_help">如果您已经查阅了该项目，并发现<strong>不</ strong>适合纳入频道，请选择“拒绝”。 然后，输入拒绝理由，以及提交者是否应该更改某些内容并重新提交。</message>
+	<message key="xmlui.Submission.workflow.PerformTaskStep.reject_help">如果您已经查阅了该项目，并发现<strong>不</strong>适合纳入频道，请选择“拒绝”。 然后，输入拒绝理由，以及提交者是否应该更改某些内容并重新提交。</message>
 	<message key="xmlui.Submission.workflow.PerformTaskStep.reject_submit">拒绝项目</message>
 	<message key="xmlui.Submission.workflow.PerformTaskStep.edit_help">选择此选项可更改项目的属性值。</message>
 	<message key="xmlui.Submission.workflow.PerformTaskStep.edit_submit">编辑属性</message>
@@ -994,7 +994,7 @@
 	<!-- contextual menu items -->
 	<message key="xmlui.administrative.Navigation.context_head">内容</message>
 	<message key="xmlui.administrative.Navigation.context_edit_item">编辑项目</message>
-	<message key="xmlui.administrative.Navigation.context_edit_collection">编辑 频道</message>
+	<message key="xmlui.administrative.Navigation.context_edit_collection">编辑频道</message>
 	<message key="xmlui.administrative.Navigation.context_item_mapper">项目映射</message>
 	<message key="xmlui.administrative.Navigation.context_edit_community">编辑社区</message>
 	<message key="xmlui.administrative.Navigation.context_create_collection">创建频道</message>
@@ -1089,7 +1089,7 @@
 	<message key="xmlui.administrative.eperson.EditEPersonForm.error_fname">请输入“姓”</message>
 	<message key="xmlui.administrative.eperson.EditEPersonForm.error_lname">请输入“名”</message>
 	<message key="xmlui.administrative.eperson.EditEPersonForm.req_certs">需要证书</message>
-	<message key="xmlui.administrative.eperson.EditEPersonForm.can_log_in">无法登录</message>
+	<message key="xmlui.administrative.eperson.EditEPersonForm.can_log_in">可以登录</message>
 	<message key="xmlui.administrative.eperson.EditEPersonForm.submit_reset_password">重置密码</message>
 	<message key="xmlui.administrative.eperson.EditEPersonForm.special_help">您也可以从系统中永久删除此用户或重置其密码。 当重置密码时，系统将给用户发送一封电子邮件，其中包含特殊链接，用来重置密码。</message>
 	<message key="xmlui.administrative.eperson.EditEPersonForm.submit_delete">删除用户</message>
@@ -1500,7 +1500,7 @@
 	<message key="xmlui.administrative.item.AddBitstreamForm.file_label">文件</message>
 	<message key="xmlui.administrative.item.AddBitstreamForm.file_help">点击“浏览...”选择文件；或输入完整文件路径..</message>
 	<message key="xmlui.administrative.item.AddBitstreamForm.description_label">描述</message>
-	<message key="xmlui.administrative.item.AddBitstreamForm.description_help">可选, 提供文件的简要说明，例如“<i>文章主体</ i>”或“<i>相关依据</ i>”.</message>
+	<message key="xmlui.administrative.item.AddBitstreamForm.description_help">可选, 提供文件的简要说明，例如“<i>文章主体</i>”或“<i>相关依据</i>”.</message>
 	<message key="xmlui.administrative.item.AddBitstreamForm.submit_upload">上传</message>
 	<message key="xmlui.administrative.item.AddBitstreamForm.no_bundles">您需要至少在一个包bundle里有 添加 &amp; 可写 权限.</message>
 
@@ -1548,7 +1548,7 @@
 	<message key="xmlui.administrative.item.EditBitstreamForm.primary_option_yes">是</message>
 	<message key="xmlui.administrative.item.EditBitstreamForm.primary_option_no">否</message>
 	<message key="xmlui.administrative.item.EditBitstreamForm.description_label">描述</message>
-	<message key="xmlui.administrative.item.EditBitstreamForm.description_help">可选, 提供文件的简要说明，例如“<i>文章主体</ i>”或“<i>相关依据</ i>”.</message>
+	<message key="xmlui.administrative.item.EditBitstreamForm.description_help">可选, 提供文件的简要说明，例如“<i>文章主体</i>”或“<i>相关依据</i>”.</message>
 	<message key="xmlui.administrative.item.EditBitstreamForm.para1">下拉选择文件格式, 例如 "<i>Adobe PDF</i>" or "<i>Microsoft Word</i>." <strong>如果列表中没有您要选择的格式</strong>, 请在下方的输入框中描述.</message>
 	<message key="xmlui.administrative.item.EditBitstreamForm.format_label">选中的格式</message>
 	<message key="xmlui.administrative.item.EditBitstreamForm.format_default">格式不在列表中</message>
@@ -2075,10 +2075,10 @@
 	<message key="xmlui.statistics.visits.cities">查看热门城市</message>
 	<message key="xmlui.statistics.visits.bitstreams">文件访问</message>
 	<message key="xmlui.statistics.Navigation.title">统计</message>
-	<message key="xmlui.statistics.Navigation.usage.view">查看使用统计</message>
-	<message key="xmlui.statistics.Navigation.usage-Elasticsearch.view">查看使用统计</message>
-	<message key="xmlui.statistics.Navigation.search.view">查看搜索统计</message>
-	<message key="xmlui.statistics.Navigation.workflow.view">查看工作流统计</message>
+	<message key="xmlui.statistics.Navigation.usage.view">使用统计</message>
+	<message key="xmlui.statistics.Navigation.usage-Elasticsearch.view">使用统计</message>
+	<message key="xmlui.statistics.Navigation.search.view">搜索统计</message>
+	<message key="xmlui.statistics.Navigation.workflow.view">工作流统计</message>
 	<message key="xmlui.statistics.trail">统计</message>
 	<message key="xmlui.statistics.trail-search">搜索统计</message>
 	<message key="xmlui.statistics.trail-workflow">工作流统计</message>
