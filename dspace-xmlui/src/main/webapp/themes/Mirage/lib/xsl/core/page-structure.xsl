@@ -20,17 +20,17 @@
 -->
 
 <xsl:stylesheet xmlns:i18n="http://apache.org/cocoon/i18n/2.1"
-    xmlns:dri="http://di.tamu.edu/DRI/1.0/"
-    xmlns:mets="http://www.loc.gov/METS/"
-    xmlns:xlink="http://www.w3.org/TR/xlink/"
-    xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"
-    xmlns:dim="http://www.dspace.org/xmlns/dspace/dim"
-    xmlns:xhtml="http://www.w3.org/1999/xhtml"
-    xmlns:mods="http://www.loc.gov/mods/v3"
-    xmlns:dc="http://purl.org/dc/elements/1.1/"
-    xmlns:confman="org.dspace.core.ConfigurationManager"
-    xmlns="http://www.w3.org/1999/xhtml"
-    exclude-result-prefixes="i18n dri mets xlink xsl dim xhtml mods dc confman">
+                xmlns:dri="http://di.tamu.edu/DRI/1.0/"
+                xmlns:mets="http://www.loc.gov/METS/"
+                xmlns:xlink="http://www.w3.org/TR/xlink/"
+                xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"
+                xmlns:dim="http://www.dspace.org/xmlns/dspace/dim"
+                xmlns:xhtml="http://www.w3.org/1999/xhtml"
+                xmlns:mods="http://www.loc.gov/mods/v3"
+                xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:confman="org.dspace.core.ConfigurationManager"
+                xmlns="http://www.w3.org/1999/xhtml"
+                exclude-result-prefixes="i18n dri mets xlink xsl dim xhtml mods dc confman">
 
     <xsl:output indent="yes"/>
 
@@ -38,7 +38,8 @@
         Requested Page URI. Some functions may alter behavior of processing depending if URI matches a pattern.
         Specifically, adding a static page will need to override the DRI, to directly add content.
     -->
-    <xsl:variable name="request-uri" select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='request'][@qualifier='URI']"/>
+    <xsl:variable name="request-uri"
+                  select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='request'][@qualifier='URI']"/>
 
     <!--
         The starting point of any XSL processing is matching the root element. In DRI the root element is document,
@@ -71,10 +72,11 @@
                 &lt;!--[if (gt IE 9)|!(IE)]&gt;&lt;!--&gt;&lt;body&gt;&lt;!--&lt;![endif]--&gt;</xsl:text>
 
             <xsl:choose>
-              <xsl:when test="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='framing'][@qualifier='popup']">
-                <xsl:apply-templates select="dri:body/*"/>
-              </xsl:when>
-                  <xsl:otherwise>
+                <xsl:when
+                        test="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='framing'][@qualifier='popup']">
+                    <xsl:apply-templates select="dri:body/*"/>
+                </xsl:when>
+                <xsl:otherwise>
                     <div id="ds-main">
                         <!--The header div, complete with title, subtitle and other junk-->
                         <xsl:call-template name="buildHeader"/>
@@ -116,16 +118,16 @@
 
                 </xsl:otherwise>
             </xsl:choose>
-                <!-- Javascript at the bottom for fast page loading -->
-              <xsl:call-template name="addJavascript"/>
+            <!-- Javascript at the bottom for fast page loading -->
+            <xsl:call-template name="addJavascript"/>
 
             <xsl:text disable-output-escaping="yes">&lt;/body&gt;</xsl:text>
         </html>
     </xsl:template>
 
-        <!-- The HTML head element contains references to CSS as well as embedded JavaScript code. Most of this
-        information is either user-provided bits of post-processing (as in the case of the JavaScript), or
-        references to stylesheets pulled directly from the pageMeta element. -->
+    <!-- The HTML head element contains references to CSS as well as embedded JavaScript code. Most of this
+    information is either user-provided bits of post-processing (as in the case of the JavaScript), or
+    references to stylesheets pulled directly from the pageMeta element. -->
     <xsl:template name="buildHead">
         <head>
             <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
@@ -143,29 +145,34 @@
 
             <link rel="shortcut icon">
                 <xsl:attribute name="href">
-                    <xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath'][not(@qualifier)]"/>
+                    <xsl:value-of
+                            select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath'][not(@qualifier)]"/>
                     <xsl:text>/themes/</xsl:text>
-                    <xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='theme'][@qualifier='path']"/>
+                    <xsl:value-of
+                            select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='theme'][@qualifier='path']"/>
                     <xsl:text>/images/favicon.ico</xsl:text>
                 </xsl:attribute>
             </link>
             <link rel="apple-touch-icon">
                 <xsl:attribute name="href">
-                    <xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath'][not(@qualifier)]"/>
+                    <xsl:value-of
+                            select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath'][not(@qualifier)]"/>
                     <xsl:text>/themes/</xsl:text>
-                    <xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='theme'][@qualifier='path']"/>
+                    <xsl:value-of
+                            select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='theme'][@qualifier='path']"/>
                     <xsl:text>/images/apple-touch-icon.png</xsl:text>
                 </xsl:attribute>
             </link>
 
             <meta name="Generator">
-              <xsl:attribute name="content">
-                <xsl:text>DSpace</xsl:text>
-                <xsl:if test="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='dspace'][@qualifier='version']">
-                  <xsl:text> </xsl:text>
-                  <xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='dspace'][@qualifier='version']"/>
-                </xsl:if>
-              </xsl:attribute>
+                <xsl:attribute name="content">
+                    <xsl:text>DSpace</xsl:text>
+                    <xsl:if test="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='dspace'][@qualifier='version']">
+                        <xsl:text> </xsl:text>
+                        <xsl:value-of
+                                select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='dspace'][@qualifier='version']"/>
+                    </xsl:if>
+                </xsl:attribute>
             </meta>
 
             <xsl:if test="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='ROBOTS'][not(@qualifier)]">
@@ -183,9 +190,11 @@
                         <xsl:value-of select="@qualifier"/>
                     </xsl:attribute>
                     <xsl:attribute name="href">
-                        <xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath'][not(@qualifier)]"/>
+                        <xsl:value-of
+                                select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath'][not(@qualifier)]"/>
                         <xsl:text>/themes/</xsl:text>
-                        <xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='theme'][@qualifier='path']"/>
+                        <xsl:value-of
+                                select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='theme'][@qualifier='path']"/>
                         <xsl:text>/</xsl:text>
                         <xsl:value-of select="."/>
                     </xsl:attribute>
@@ -209,94 +218,102 @@
             <xsl:if test="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='opensearch'][@qualifier='shortName']">
                 <link rel="search" type="application/opensearchdescription+xml">
                     <xsl:attribute name="href">
-                        <xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='request'][@qualifier='scheme']"/>
+                        <xsl:value-of
+                                select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='request'][@qualifier='scheme']"/>
                         <xsl:text>://</xsl:text>
-                        <xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='request'][@qualifier='serverName']"/>
+                        <xsl:value-of
+                                select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='request'][@qualifier='serverName']"/>
                         <xsl:text>:</xsl:text>
-                        <xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='request'][@qualifier='serverPort']"/>
+                        <xsl:value-of
+                                select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='request'][@qualifier='serverPort']"/>
                         <xsl:value-of select="$context-path"/>
                         <xsl:text>/</xsl:text>
-                        <xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='opensearch'][@qualifier='autolink']"/>
+                        <xsl:value-of
+                                select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='opensearch'][@qualifier='autolink']"/>
                     </xsl:attribute>
-                    <xsl:attribute name="title" >
-                        <xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='opensearch'][@qualifier='shortName']"/>
+                    <xsl:attribute name="title">
+                        <xsl:value-of
+                                select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='opensearch'][@qualifier='shortName']"/>
                     </xsl:attribute>
                 </link>
             </xsl:if>
 
             <!-- The following javascript removes the default text of empty text areas when they are focused on or submitted -->
             <!-- There is also javascript to disable submitting a form when the 'enter' key is pressed. -->
-                        <script type="text/javascript">
-                                //Clear default text of empty text areas on focus
-                                function tFocus(element)
-                                {
-                                        if (element.value == '<i18n:text>xmlui.dri2xhtml.default.textarea.value</i18n:text>'){element.value='';}
-                                }
-                                //Clear default text of empty text areas on submit
-                                function tSubmit(form)
-                                {
-                                        var defaultedElements = document.getElementsByTagName("textarea");
-                                        for (var i=0; i != defaultedElements.length; i++){
-                                                if (defaultedElements[i].value == '<i18n:text>xmlui.dri2xhtml.default.textarea.value</i18n:text>'){
-                                                        defaultedElements[i].value='';}}
-                                }
-                                //Disable pressing 'enter' key to submit a form (otherwise pressing 'enter' causes a submission to start over)
-                                function disableEnterKey(e)
-                                {
-                                     var key;
+            <script type="text/javascript">
+                //Clear default text of empty text areas on focus
+                function tFocus(element)
+                {
+                if (element.value == '<i18n:text>xmlui.dri2xhtml.default.textarea.value</i18n:text>'){element.value='';}
+                }
+                //Clear default text of empty text areas on submit
+                function tSubmit(form)
+                {
+                var defaultedElements = document.getElementsByTagName("textarea");
+                for (var i=0; i != defaultedElements.length; i++){
+                if (defaultedElements[i].value == '<i18n:text>xmlui.dri2xhtml.default.textarea.value</i18n:text>'){
+                defaultedElements[i].value='';}}
+                }
+                //Disable pressing 'enter' key to submit a form (otherwise pressing 'enter' causes a submission to start
+                over)
+                function disableEnterKey(e)
+                {
+                var key;
 
-                                     if(window.event)
-                                          key = window.event.keyCode;     //Internet Explorer
-                                     else
-                                          key = e.which;     //Firefox and Netscape
+                if(window.event)
+                key = window.event.keyCode; //Internet Explorer
+                else
+                key = e.which; //Firefox and Netscape
 
-                                     if(key == 13)  //if "Enter" pressed, then disable!
-                                          return false;
-                                     else
-                                          return true;
-                                }
+                if(key == 13) //if "Enter" pressed, then disable!
+                return false;
+                else
+                return true;
+                }
 
-                                function FnArray()
-                                {
-                                    this.funcs = new Array;
-                                }
+                function FnArray()
+                {
+                this.funcs = new Array;
+                }
 
-                                FnArray.prototype.add = function(f)
-                                {
-                                    if( typeof f!= "function" )
-                                    {
-                                        f = new Function(f);
-                                    }
-                                    this.funcs[this.funcs.length] = f;
-                                };
+                FnArray.prototype.add = function(f)
+                {
+                if( typeof f!= "function" )
+                {
+                f = new Function(f);
+                }
+                this.funcs[this.funcs.length] = f;
+                };
 
-                                FnArray.prototype.execute = function()
-                                {
-                                    for( var i=0; i <xsl:text disable-output-escaping="yes">&lt;</xsl:text> this.funcs.length; i++ )
-                                    {
-                                        this.funcs[i]();
-                                    }
-                                };
+                FnArray.prototype.execute = function()
+                {
+                for( var i=0; i
+                <xsl:text disable-output-escaping="yes">&lt;</xsl:text> this.funcs.length; i++ )
+                {
+                this.funcs[i]();
+                }
+                };
 
-                                var runAfterJSImports = new FnArray();
+                var runAfterJSImports = new FnArray();
             </script>
 
             <!-- Add the title in -->
-            <xsl:variable name="page_title" select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='title']" />
+            <xsl:variable name="page_title"
+                          select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='title']"/>
             <title>
                 <xsl:choose>
-                        <xsl:when test="starts-with($request-uri, 'page/about')">
-                                <xsl:text>About This Repository</xsl:text>
-                        </xsl:when>
-                        <xsl:when test="not($page_title)">
-                            <i18n:text>xmlui.dri2xhtml.METS-1.0.no-title</i18n:text>
-                        </xsl:when>
-                        <xsl:when test="$page_title = ''">
-                            <i18n:text>xmlui.dri2xhtml.METS-1.0.no-title</i18n:text>
-                        </xsl:when>
-                        <xsl:otherwise>
-                                <xsl:copy-of select="$page_title/node()" />
-                        </xsl:otherwise>
+                    <xsl:when test="starts-with($request-uri, 'page/about')">
+                        <xsl:text>About This Repository</xsl:text>
+                    </xsl:when>
+                    <xsl:when test="not($page_title)">
+                        <i18n:text>xmlui.dri2xhtml.METS-1.0.no-title</i18n:text>
+                    </xsl:when>
+                    <xsl:when test="$page_title = ''">
+                        <i18n:text>xmlui.dri2xhtml.METS-1.0.no-title</i18n:text>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:copy-of select="$page_title/node()"/>
+                    </xsl:otherwise>
                 </xsl:choose>
             </title>
 
@@ -307,7 +324,8 @@
             </xsl:if>
 
             <!-- Add all Google Scholar Metadata values -->
-            <xsl:for-each select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[substring(@element, 1, 9) = 'citation_']">
+            <xsl:for-each
+                    select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[substring(@element, 1, 9) = 'citation_']">
                 <meta name="{@element}" content="{.}"></meta>
             </xsl:for-each>
 
@@ -315,18 +333,19 @@
             <xsl:if test="confman:getProperty('webui.browse.render-scientific-formulas') = 'true'">
                 <script type="text/x-mathjax-config">
                     MathJax.Hub.Config({
-                      tex2jax: {
-                        inlineMath: [['$','$'], ['\\(','\\)']],
-                        ignoreClass: "detail-field-data|detailtable|exception"
-                      },
-                      TeX: {
-                        Macros: {
-                          AA: '{\\mathring A}'
+                        tex2jax: {
+                            inlineMath: [['$', '$'], ['\\(', '\\)']],
+                            ignoreClass: "detail-field-data|detailtable|exception"
+                        },
+                        TeX: {
+                            Macros: {
+                                AA: '{\\mathring A}'
+                            }
                         }
-                      }
                     });
                 </script>
-                <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">&#160;</script>
+                <script type="text/javascript"
+                        src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">&#160;</script>
             </xsl:if>
 
         </head>
@@ -346,7 +365,7 @@
                     </xsl:attribute>
                     <span id="ds-header-logo">&#160;</span>
                     <span id="ds-header-logo-text">
-                       <i18n:text>xmlui.dri2xhtml.structural.head-subtitle</i18n:text>
+                        <i18n:text>xmlui.dri2xhtml.structural.head-subtitle</i18n:text>
                     </span>
                 </a>
                 <h1 class="pagetitle visuallyhidden">
@@ -404,9 +423,9 @@
                         </div>
                     </xsl:otherwise>
                 </xsl:choose>
-                
-                <xsl:call-template name="languageSelection" />
-                
+
+                <xsl:call-template name="languageSelection"/>
+
             </div>
         </div>
     </xsl:template>
@@ -418,7 +437,7 @@
             <ul id="ds-trail">
                 <xsl:choose>
                     <xsl:when test="starts-with($request-uri, 'page/about')">
-                         <xsl:text>About This Repository</xsl:text>
+                        <xsl:text>About This Repository</xsl:text>
                     </xsl:when>
                     <xsl:when test="count(/dri:document/dri:meta/dri:pageMeta/dri:trail) = 0">
                         <li class="ds-trail-link first-link">-</li>
@@ -455,11 +474,11 @@
                         <xsl:attribute name="href">
                             <xsl:value-of select="./@target"/>
                         </xsl:attribute>
-                        <xsl:apply-templates />
+                        <xsl:apply-templates/>
                     </a>
                 </xsl:when>
                 <xsl:otherwise>
-                    <xsl:apply-templates />
+                    <xsl:apply-templates/>
                 </xsl:otherwise>
             </xsl:choose>
         </li>
@@ -475,47 +494,48 @@
 
         <xsl:variable name="ccLicenseName"
                       select="document($externalMetadataURL)//dim:field[@element='rights']"
-                      />
+                />
         <xsl:variable name="ccLicenseUri"
                       select="document($externalMetadataURL)//dim:field[@element='rights'][@qualifier='uri']"
-                      />
+                />
         <xsl:variable name="handleUri">
-                    <xsl:for-each select="document($externalMetadataURL)//dim:field[@element='identifier' and @qualifier='uri']">
-                        <a>
-                            <xsl:attribute name="href">
-                                <xsl:copy-of select="./node()"/>
-                            </xsl:attribute>
-                            <xsl:copy-of select="./node()"/>
-                        </a>
-                        <xsl:if test="count(following-sibling::dim:field[@element='identifier' and @qualifier='uri']) != 0">
-                            <xsl:text>, </xsl:text>
-                        </xsl:if>
-                </xsl:for-each>
+            <xsl:for-each
+                    select="document($externalMetadataURL)//dim:field[@element='identifier' and @qualifier='uri']">
+                <a>
+                    <xsl:attribute name="href">
+                        <xsl:copy-of select="./node()"/>
+                    </xsl:attribute>
+                    <xsl:copy-of select="./node()"/>
+                </a>
+                <xsl:if test="count(following-sibling::dim:field[@element='identifier' and @qualifier='uri']) != 0">
+                    <xsl:text>, </xsl:text>
+                </xsl:if>
+            </xsl:for-each>
         </xsl:variable>
 
-   <xsl:if test="$ccLicenseName and $ccLicenseUri and contains($ccLicenseUri, 'creativecommons')">
-        <div about="{$handleUri}" class="clearfix">
-            <xsl:attribute name="style">
-                <xsl:text>margin:0em 2em 0em 2em; padding-bottom:0em;</xsl:text>
-            </xsl:attribute>
-            <a rel="license"
-                href="{$ccLicenseUri}"
-                alt="{$ccLicenseName}"
-                title="{$ccLicenseName}"
-                >
-                <xsl:call-template name="cc-logo">
-                    <xsl:with-param name="ccLicenseName" select="$ccLicenseName"/>
-                    <xsl:with-param name="ccLicenseUri" select="$ccLicenseUri"/>
-                </xsl:call-template>
-            </a>
-            <span>
+        <xsl:if test="$ccLicenseName and $ccLicenseUri and contains($ccLicenseUri, 'creativecommons')">
+            <div about="{$handleUri}" class="clearfix">
                 <xsl:attribute name="style">
-                    <xsl:text>vertical-align:middle; text-indent:0 !important;</xsl:text>
+                    <xsl:text>margin:0em 2em 0em 2em; padding-bottom:0em;</xsl:text>
                 </xsl:attribute>
-                <i18n:text>xmlui.dri2xhtml.METS-1.0.cc-license-text</i18n:text>
-                <xsl:value-of select="$ccLicenseName"/>
-            </span>
-        </div>
+                <a rel="license"
+                   href="{$ccLicenseUri}"
+                   alt="{$ccLicenseName}"
+                   title="{$ccLicenseName}"
+                        >
+                    <xsl:call-template name="cc-logo">
+                        <xsl:with-param name="ccLicenseName" select="$ccLicenseName"/>
+                        <xsl:with-param name="ccLicenseUri" select="$ccLicenseUri"/>
+                    </xsl:call-template>
+                </a>
+                <span>
+                    <xsl:attribute name="style">
+                        <xsl:text>vertical-align:middle; text-indent:0 !important;</xsl:text>
+                    </xsl:attribute>
+                    <i18n:text>xmlui.dri2xhtml.METS-1.0.cc-license-text</i18n:text>
+                    <xsl:value-of select="$ccLicenseName"/>
+                </span>
+            </div>
         </xsl:if>
     </xsl:template>
 
@@ -523,43 +543,43 @@
         <xsl:param name="ccLicenseName"/>
         <xsl:param name="ccLicenseUri"/>
         <xsl:variable name="ccLogo">
-             <xsl:choose>
-                  <xsl:when test="starts-with($ccLicenseUri,
+            <xsl:choose>
+                <xsl:when test="starts-with($ccLicenseUri,
                                            'http://creativecommons.org/licenses/by/')">
-                       <xsl:value-of select="'cc-by.png'" />
-                  </xsl:when>
-                  <xsl:when test="starts-with($ccLicenseUri,
+                    <xsl:value-of select="'cc-by.png'"/>
+                </xsl:when>
+                <xsl:when test="starts-with($ccLicenseUri,
                                            'http://creativecommons.org/licenses/by-sa/')">
-                       <xsl:value-of select="'cc-by-sa.png'" />
-                  </xsl:when>
-                  <xsl:when test="starts-with($ccLicenseUri,
+                    <xsl:value-of select="'cc-by-sa.png'"/>
+                </xsl:when>
+                <xsl:when test="starts-with($ccLicenseUri,
                                            'http://creativecommons.org/licenses/by-nd/')">
-                       <xsl:value-of select="'cc-by-nd.png'" />
-                  </xsl:when>
-                  <xsl:when test="starts-with($ccLicenseUri,
+                    <xsl:value-of select="'cc-by-nd.png'"/>
+                </xsl:when>
+                <xsl:when test="starts-with($ccLicenseUri,
                                            'http://creativecommons.org/licenses/by-nc/')">
-                       <xsl:value-of select="'cc-by-nc.png'" />
-                  </xsl:when>
-                  <xsl:when test="starts-with($ccLicenseUri,
+                    <xsl:value-of select="'cc-by-nc.png'"/>
+                </xsl:when>
+                <xsl:when test="starts-with($ccLicenseUri,
                                            'http://creativecommons.org/licenses/by-nc-sa/')">
-                       <xsl:value-of select="'cc-by-nc-sa.png'" />
-                  </xsl:when>
-                  <xsl:when test="starts-with($ccLicenseUri,
+                    <xsl:value-of select="'cc-by-nc-sa.png'"/>
+                </xsl:when>
+                <xsl:when test="starts-with($ccLicenseUri,
                                            'http://creativecommons.org/licenses/by-nc-nd/')">
-                       <xsl:value-of select="'cc-by-nc-nd.png'" />
-                  </xsl:when>
-                  <xsl:when test="starts-with($ccLicenseUri,
+                    <xsl:value-of select="'cc-by-nc-nd.png'"/>
+                </xsl:when>
+                <xsl:when test="starts-with($ccLicenseUri,
                                            'http://creativecommons.org/publicdomain/zero/')">
-                       <xsl:value-of select="'cc-zero.png'" />
-                  </xsl:when>
-                  <xsl:when test="starts-with($ccLicenseUri,
+                    <xsl:value-of select="'cc-zero.png'"/>
+                </xsl:when>
+                <xsl:when test="starts-with($ccLicenseUri,
                                            'http://creativecommons.org/publicdomain/mark/')">
-                       <xsl:value-of select="'cc-mark.png'" />
-                  </xsl:when>
-                  <xsl:otherwise>
-                       <xsl:value-of select="'cc-generic.png'" />
-                  </xsl:otherwise>
-             </xsl:choose>
+                    <xsl:value-of select="'cc-mark.png'"/>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:value-of select="'cc-generic.png'"/>
+                </xsl:otherwise>
+            </xsl:choose>
         </xsl:variable>
         <xsl:variable name="ccLogoImgSrc">
             <xsl:value-of select="$theme-path"/>
@@ -567,15 +587,15 @@
             <xsl:value-of select="$ccLogo"/>
         </xsl:variable>
         <img>
-             <xsl:attribute name="src">
+            <xsl:attribute name="src">
                 <xsl:value-of select="$ccLogoImgSrc"/>
-             </xsl:attribute>
-             <xsl:attribute name="alt">
-                 <xsl:value-of select="$ccLicenseName"/>
-             </xsl:attribute>
-             <xsl:attribute name="style">
-                 <xsl:text>float:left; margin:0em 1em 0em 0em; border:none;</xsl:text>
-             </xsl:attribute>
+            </xsl:attribute>
+            <xsl:attribute name="alt">
+                <xsl:value-of select="$ccLicenseName"/>
+            </xsl:attribute>
+            <xsl:attribute name="style">
+                <xsl:text>float:left; margin:0em 1em 0em 0em; border:none;</xsl:text>
+            </xsl:attribute>
         </img>
     </xsl:template>
 
@@ -584,12 +604,14 @@
         <div id="ds-footer-wrapper">
             <div id="ds-footer">
                 <div id="ds-footer-left">
-                    <a href="http://www.dspace.org/" target="_blank">DSpace software</a> copyright&#160;&#169;&#160;2002-2016&#160; <a href="http://www.duraspace.org/" target="_blank">DuraSpace</a>
+                    <a href="http://www.dspace.org/" target="_blank">DSpace software</a>
+                    copyright&#160;&#169;&#160;2002-2016&#160;
+                    <a href="http://www.duraspace.org/" target="_blank">DuraSpace</a>
                 </div>
                 <div id="ds-footer-right">
                     <span class="theme-by">Theme by&#160;</span>
                     <a title="Atmire NV" target="_blank" href="http://atmire.com" id="ds-footer-logo-link">
-                    <span id="ds-footer-logo">&#160;</span>
+                        <span id="ds-footer-logo">&#160;</span>
                     </a>
                 </div>
                 <div id="ds-footer-links">
@@ -625,11 +647,9 @@
     </xsl:template>
 
 
-<!--
-        The meta, body, options elements; the three top-level elements in the schema
--->
-
-
+    <!--
+            The meta, body, options elements; the three top-level elements in the schema
+    -->
 
 
     <!--
@@ -641,7 +661,8 @@
             <xsl:if test="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='alert'][@qualifier='message']">
                 <div id="ds-system-wide-alert">
                     <p>
-                        <xsl:copy-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='alert'][@qualifier='message']/node()"/>
+                        <xsl:copy-of
+                                select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='alert'][@qualifier='message']/node()"/>
                     </p>
                 </div>
             </xsl:if>
@@ -651,16 +672,18 @@
                 <xsl:when test="starts-with($request-uri, 'page/about')">
                     <div>
                         <h1>About This Repository</h1>
-                        <p>To add your own content to this page, edit webapps/xmlui/themes/Mirage/lib/xsl/core/page-structure.xsl and
+                        <p>To add your own content to this page, edit
+                            webapps/xmlui/themes/Mirage/lib/xsl/core/page-structure.xsl and
                             add your own content to the title, trail, and body. If you wish to add additional pages, you
                             will need to create an additional xsl:when block and match the request-uri to whatever page
                             you are adding. Currently, static pages created through altering XSL are only available
-                            under the URI prefix of page/.</p>
+                            under the URI prefix of page/.
+                        </p>
                     </div>
                 </xsl:when>
                 <!-- Otherwise use default handling of body -->
                 <xsl:otherwise>
-                    <xsl:apply-templates />
+                    <xsl:apply-templates/>
                 </xsl:otherwise>
             </xsl:choose>
 
@@ -686,11 +709,17 @@
             <xsl:text>1.6.4</xsl:text>
         </xsl:variable>
 
+        <!--
+                <script type="text/javascript" src="{concat($scheme, 'ajax.googleapis.com/ajax/libs/jquery/', $jqueryVersion ,'/jquery.min.js')}">&#160;</script>
+         -->
+        <!-- vince 改谷歌依赖为国内cdn依赖-->
 
-        <script type="text/javascript" src="{concat($scheme, 'ajax.googleapis.com/ajax/libs/jquery/', $jqueryVersion ,'/jquery.min.js')}">&#160;</script>
+        <script type="text/javascript"
+                src="{concat($scheme, 'cdn.bootcss.com/jquery/', $jqueryVersion ,'/jquery.min.js')}">&#160;</script>
 
         <xsl:variable name="localJQuerySrc">
-                <xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath'][not(@qualifier)]"/>
+            <xsl:value-of
+                    select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath'][not(@qualifier)]"/>
             <xsl:text>/static/js/jquery-</xsl:text>
             <xsl:value-of select="$jqueryVersion"/>
             <xsl:text>.min.js</xsl:text>
@@ -698,42 +727,54 @@
 
         <script type="text/javascript">
             <xsl:text disable-output-escaping="yes">!window.jQuery &amp;&amp; document.write('&lt;script type="text/javascript" src="</xsl:text><xsl:value-of
-                select="$localJQuerySrc"/><xsl:text disable-output-escaping="yes">"&gt;&#160;&lt;\/script&gt;')</xsl:text>
+                select="$localJQuerySrc"/><xsl:text
+                disable-output-escaping="yes">"&gt;&#160;&lt;\/script&gt;')</xsl:text>
         </script>
 
         <script type="text/javascript"><xsl:text>
-                         if(typeof window.publication === 'undefined'){
-                            window.publication={};
-                          };
-                        window.publication.contextPath= '</xsl:text><xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath'][not(@qualifier)]"/><xsl:text>';</xsl:text>
+                                 if(typeof window.publication === 'undefined'){
+                                    window.publication={};
+                                  };
+                                window.publication.contextPath= '</xsl:text><xsl:value-of
+                select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath'][not(@qualifier)]"/><xsl:text>';</xsl:text>
             <xsl:text>window.publication.themePath= '</xsl:text><xsl:value-of select="$theme-path"/><xsl:text>';</xsl:text>
         </script>
         <script>
-            <xsl:text>if(!window.DSpace){window.DSpace={};}window.DSpace.context_path='</xsl:text><xsl:value-of select="$context-path"/><xsl:text>';window.DSpace.theme_path='</xsl:text><xsl:value-of select="$theme-path"/><xsl:text>/';</xsl:text>
+            <xsl:text>if(!window.DSpace){window.DSpace={};}window.DSpace.context_path='</xsl:text><xsl:value-of
+                select="$context-path"/><xsl:text>';window.DSpace.theme_path='</xsl:text><xsl:value-of
+                select="$theme-path"/><xsl:text>/';</xsl:text>
         </script>
 
 
         <!-- Add theme javascript  -->
-        <xsl:for-each select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='javascript'][@qualifier='url']">
+        <xsl:for-each
+                select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='javascript'][@qualifier='url']">
             <script type="text/javascript">
                 <xsl:attribute name="src">
                     <xsl:value-of select="."/>
-                </xsl:attribute>&#160;</script>
+                </xsl:attribute>
+                &#160;
+            </script>
         </xsl:for-each>
 
         <xsl:for-each select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='javascript'][not(@qualifier)]">
             <script type="text/javascript">
                 <xsl:attribute name="src">
-                    <xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath'][not(@qualifier)]"/>
+                    <xsl:value-of
+                            select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath'][not(@qualifier)]"/>
                     <xsl:text>/themes/</xsl:text>
-                    <xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='theme'][@qualifier='path']"/>
+                    <xsl:value-of
+                            select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='theme'][@qualifier='path']"/>
                     <xsl:text>/</xsl:text>
                     <xsl:value-of select="."/>
-                </xsl:attribute>&#160;</script>
+                </xsl:attribute>
+                &#160;
+            </script>
         </xsl:for-each>
 
         <!-- add "shared" javascript from static, path is relative to webapp root -->
-        <xsl:for-each select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='javascript'][@qualifier='static']">
+        <xsl:for-each
+                select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='javascript'][@qualifier='static']">
             <!--This is a dirty way of keeping the scriptaculous stuff from choice-support
             out of our theme without modifying the administrative and submission sitemaps.
             This is obviously not ideal, but adding those scripts in those sitemaps is far
@@ -742,11 +783,15 @@
                 <xsl:when test="text() = 'static/js/choice-support.js'">
                     <script type="text/javascript">
                         <xsl:attribute name="src">
-                            <xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath'][not(@qualifier)]"/>
+                            <xsl:value-of
+                                    select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath'][not(@qualifier)]"/>
                             <xsl:text>/themes/</xsl:text>
-                            <xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='theme'][@qualifier='path']"/>
+                            <xsl:value-of
+                                    select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='theme'][@qualifier='path']"/>
                             <xsl:text>/lib/js/choice-support.js</xsl:text>
-                        </xsl:attribute>&#160;</script>
+                        </xsl:attribute>
+                        &#160;
+                    </script>
                 </xsl:when>
                 <xsl:when test="not(starts-with(text(), 'static/js/scriptaculous'))">
                     <script type="text/javascript">
@@ -755,48 +800,55 @@
                                     select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath'][not(@qualifier)]"/>
                             <xsl:text>/</xsl:text>
                             <xsl:value-of select="."/>
-                        </xsl:attribute>&#160;</script>
+                        </xsl:attribute>
+                        &#160;
+                    </script>
                 </xsl:when>
             </xsl:choose>
         </xsl:for-each>
 
         <!-- add setup JS code if this is a choices lookup page -->
         <xsl:if test="dri:body/dri:div[@n='lookup']">
-          <xsl:call-template name="choiceLookupPopUpSetup"/>
+            <xsl:call-template name="choiceLookupPopUpSetup"/>
         </xsl:if>
 
         <!--PNG Fix for IE6-->
         <xsl:text disable-output-escaping="yes">&lt;!--[if lt IE 7 ]&gt;</xsl:text>
         <script type="text/javascript">
             <xsl:attribute name="src">
-                <xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath'][not(@qualifier)]"/>
+                <xsl:value-of
+                        select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath'][not(@qualifier)]"/>
                 <xsl:text>/themes/</xsl:text>
-                <xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='theme'][@qualifier='path']"/>
+                <xsl:value-of
+                        select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='theme'][@qualifier='path']"/>
                 <xsl:text>/lib/js/DD_belatedPNG_0.0.8a.js?v=1</xsl:text>
-            </xsl:attribute>&#160;</script>
+            </xsl:attribute>
+            &#160;
+        </script>
         <script type="text/javascript">
             <xsl:text>DD_belatedPNG.fix('#ds-header-logo');DD_belatedPNG.fix('#ds-footer-logo');$.each($('img[src$=png]'), function() {DD_belatedPNG.fixPng(this);});</xsl:text>
         </script>
-        <xsl:text disable-output-escaping="yes" >&lt;![endif]--&gt;</xsl:text>
+        <xsl:text disable-output-escaping="yes">&lt;![endif]--&gt;</xsl:text>
 
 
         <script type="text/javascript">
             runAfterJSImports.execute();
         </script>
 
-        <xsl:call-template name="addJavascript-google-analytics" />
+        <xsl:call-template name="addJavascript-google-analytics"/>
 
         <!-- Add a contextpath to a JS variable -->
         <script type="text/javascript"><xsl:text>
             if(typeof window.orcid === 'undefined'){
                 window.orcid={};
             };
-            window.orcid.contextPath= '</xsl:text><xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath'][not(@qualifier)]"/><xsl:text>';</xsl:text>
+            window.orcid.contextPath= '</xsl:text><xsl:value-of
+                select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath'][not(@qualifier)]"/><xsl:text>';</xsl:text>
             <xsl:text>window.orcid.themePath= '</xsl:text><xsl:value-of select="$theme-path"/><xsl:text>';</xsl:text>
         </script>
 
     </xsl:template>
-    
+
     <xsl:template name="addJavascript-google-analytics">
         <!-- Add a google analytics script if the key is present -->
         <xsl:if test="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='google'][@qualifier='analytics']">
@@ -806,9 +858,12 @@
                 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
                 })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-                ga('create', '</xsl:text><xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='google'][@qualifier='analytics']"/><xsl:text>', '</xsl:text><xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='request'][@qualifier='serverName']"/><xsl:text>');
+                ga('create', '</xsl:text><xsl:value-of
+                    select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='google'][@qualifier='analytics']"/><xsl:text>', '</xsl:text><xsl:value-of
+                    select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='request'][@qualifier='serverName']"/><xsl:text>');
                 ga('send', 'pageview');
-            </xsl:text></script>
+            </xsl:text>
+            </script>
         </xsl:if>
     </xsl:template>
 
@@ -816,11 +871,13 @@
     Uses a page metadata curRequestURI which was introduced by in /xmlui/src/main/webapp/themes/Mirage/sitemap.xmap-->
     <xsl:template name="languageSelection">
         <xsl:variable name="curRequestURI">
-            <xsl:value-of select="substring-after(/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='curRequestURI'],/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='request'][@qualifier='URI'])"/>
+            <xsl:value-of
+                    select="substring-after(/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='curRequestURI'],/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='request'][@qualifier='URI'])"/>
         </xsl:variable>
         <xsl:if test="count(/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='page'][@qualifier='supportedLocale']) &gt; 1">
             <div id="ds-language-selection">
-                <xsl:for-each select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='page'][@qualifier='supportedLocale']">
+                <xsl:for-each
+                        select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='page'][@qualifier='supportedLocale']">
                     <xsl:variable name="locale" select="."/>
                     <a>
                         <xsl:attribute name="href">
@@ -828,7 +885,8 @@
                             <xsl:call-template name="getLanguageURL"/>
                             <xsl:value-of select="$locale"/>
                         </xsl:attribute>
-                        <xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='supportedLocale'][@qualifier=$locale]"/>
+                        <xsl:value-of
+                                select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='supportedLocale'][@qualifier=$locale]"/>
                     </a>
                 </xsl:for-each>
             </div>
@@ -837,7 +895,8 @@
     <!-- Builds the Query String part of the language URL. If there allready is an excisting query string 
     like: ?filtertype=subject&filter_relational_operator=equals&filter=keyword1 it appends the locale parameter with the ampersand (&) symbol -->
     <xsl:template name="getLanguageURL">
-        <xsl:variable name="queryString" select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='request'][@qualifier='queryString']"/>
+        <xsl:variable name="queryString"
+                      select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='request'][@qualifier='queryString']"/>
         <xsl:choose>
             <!-- There allready is a query string so append it and the language argument -->
             <xsl:when test="$queryString != ''">
