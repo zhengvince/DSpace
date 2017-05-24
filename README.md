@@ -1,4 +1,4 @@
-
+从版本6开始翻译，
 # DSpace
 
 [![Build Status](https://travis-ci.org/DSpace/DSpace.png?branch=master)](https://travis-ci.org/DSpace/DSpace)
