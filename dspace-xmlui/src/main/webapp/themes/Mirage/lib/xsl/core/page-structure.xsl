@@ -709,9 +709,9 @@
             <xsl:text>1.6.4</xsl:text>
         </xsl:variable>
 
-        <!--
-                <script type="text/javascript" src="{concat($scheme, 'ajax.googleapis.com/ajax/libs/jquery/', $jqueryVersion ,'/jquery.min.js')}">&#160;</script>
-         -->
+
+                <!--<script type="text/javascript" src="{concat($scheme, 'ajax.googleapis.com/ajax/libs/jquery/', $jqueryVersion ,'/jquery.min.js')}">&#160;</script>-->
+
         <!-- vince 改谷歌依赖为国内cdn依赖-->
 
         <script type="text/javascript"
