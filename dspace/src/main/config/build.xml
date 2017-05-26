@@ -16,7 +16,17 @@
   -->
 
 <project name="DSpace" default="help">
+    <!-- ============================================================= -->
+    <!--             fresh_install做了什么                             -->
+    <!-- ============================================================= -->
+    <!--
+        1. 【install_code】  将dspace中的文件复制到了目标文件夹${dspace.dir}
+        2. 【init_configs】  将dspace/congfig 中的配置文件，拷贝到${dspace.dir}/config，并且忽略与ant中冲突的同名变量
+        3. 【test_database】 执行了一个数据库测试方法，测试数据库连接
+        4. 【copy_webapps】 将dspace/webapps中文件拷贝到${dspace.dir}/webapps中
+        5. 【init_geolite】 获取并解压缩${dspace.dir}/config/GeoLiteCity.dat.gz
 
+    -->
     <!-- ============================================================= -->
     <!-- Description                                                   -->
     <!-- ============================================================= -->
@@ -83,10 +93,12 @@ Common usage:
     </tstamp>
 
     <!-- Default location of GeoLiteCity.dat.gz to download. This may be overridden, if URL path changes. -->
+    <!-- 根据IP获取位置-->
     <property name="geolite" value="http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz" />
 
     <!-- Default location of lucene-core JAR to download (for update_solr_indexes). This may be overridden, if URL path changes. -->
     <!-- NOTE: this URL should have the version of the JAR replaced with "[version]" -->
+    <!-- 全文检索包lucene-core JAR-->
     <property name="lucene-core" value="http://search.maven.org/remotecontent?filepath=org/apache/lucene/lucene-core/[version]/lucene-core-[version].jar" />
 
 
@@ -192,9 +204,15 @@ Common usage:
 
         <!--
         Copy files that are absent in target
+        [preservelastmodified]:将拷贝之后的文件修改日期设为原文件的修改日期
         -->
         <copy todir="${dspace.dir}/config" preservelastmodified="true">
+            <!-- 拷贝{config-temp}全部文件到{${dspace.dir}/config}-->
             <fileset dir="config-temp" includes="**/*">
+                <!--【targetdir】用于比较的目录一，
+                【present】有两个可选值：
+                    {srconly} 只存在于src目录，并且不存在于“targetdir”中的目录，的文件
+                    {both} 存在于src目录，并且存在于“targetdir”目录，的文件 -->
                 <present present="srconly" targetdir="${dspace.dir}/config" />
             </fileset>
         </copy>
@@ -365,6 +383,7 @@ Common usage:
                 <include name="modules/rdf/*.ttl"/>
             </fileset>
             <filterchain>
+                <!-- 如果以上这些配置文件中的配置和ant的build.xml文件中设置的变量重名，则以ant中的为准-->
                 <expandproperties />
             </filterchain>
         </copy>
@@ -742,8 +761,10 @@ Common usage:
 
         <mkdir dir="${dspace.dir}/triplestore" />
 
+        <!-- 默认为  ${dspace.dir}/exports  -->
         <mkdir dir="${org.dspace.app.itemexport.work.dir}" />
 
+        <!-- 默认为  ${dspace.dir}/exports/download-->
         <mkdir dir="${org.dspace.app.itemexport.download.dir}" />
 
         <mkdir dir="${handle.dir}" />
