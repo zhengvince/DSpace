@@ -151,9 +151,14 @@ it, please enter the types and the actual numbers or codes.</hint>
          <hint>Select the language of the main content of the item.  If the language does not appear in the list, please select 'Other'.  If the content does not really have a language (for example, if it is a dataset or an image) please select 'N/A'.</hint>
          <required></required>
        </field>
+
+       <!-- vince 将2页样式改为1页-->
+       <!--
      </page>
 
      <page number="2">
+      -->
+
        <field>
          <dc-schema>dc</dc-schema>
          <dc-element>subject</dc-element>
