@@ -2,8 +2,14 @@
 <document xmlns="http://di.tamu.edu/DRI/1.0/" xmlns:i18n="http://apache.org/cocoon/i18n/2.1" version="1.1">
 <body>
 <div id="file.news.div.news" n="news" rend="primary">
-<head>DSpace Repository</head>
-<p>DSpace is a digital service that collects, preserves, and distributes digital material. Repositories are important tools for preserving an organization&apos;s legacy; they facilitate digital preservation and scholarly communication.</p>
+    <!--vince 翻译
+    <head>DSpace Repository</head>
+    <p>DSpace is a digital service that collects, preserves, and distributes digital material. Repositories are important tools for preserving an organization&apos;s legacy; they facilitate digital preservation and scholarly communication.</p>
+    -->
+
+    <head>DSpace 知识库</head>
+    <p>企业知识库，用于收集、分类、整理、传播数字文件资料，从而使企业员工在工作中获得的的知识、经验、可以通过DSpace平台积累、共享、共建、学习、传承.</p>
+
 </div>
 </body>
 <options/>
