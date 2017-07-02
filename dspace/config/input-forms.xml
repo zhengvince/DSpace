@@ -51,6 +51,17 @@
 
                 <field>
                     <dc-schema>dc</dc-schema>
+                    <dc-element>date</dc-element>
+                    <dc-qualifier>issued</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>日期</label>
+                    <input-type>date</input-type>
+                    <hint>请提供以前出版或公开发行的日期,如果没有，可以仅输入一个年份.</hint>
+                    <required>至少输入一个年份.</required>
+                </field>
+
+                <field>
+                    <dc-schema>dc</dc-schema>
                     <dc-element>title</dc-element>
                     <dc-qualifier></dc-qualifier>
                     <repeatable>false</repeatable>
@@ -85,16 +96,7 @@
                          <required></required>
                        </field>
                 -->
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>date</dc-element>
-                    <dc-qualifier>issued</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>日期</label>
-                    <input-type>date</input-type>
-                    <hint>请提供以前出版或公开发行的日期,如果没有，可以仅输入一个年份.</hint>
-                    <required>至少输入一个年份.</required>
-                </field>
+
 
 
                 <!--vince删除字段
